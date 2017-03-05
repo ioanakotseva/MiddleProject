@@ -1,7 +1,5 @@
 package shop;
 
-import java.util.HashSet;
-
 public abstract class Shoes implements Buyable{
 
 	private String name;

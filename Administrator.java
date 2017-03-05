@@ -1,44 +1,23 @@
 package shop;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
-public class Administrator {
-
-	private String name; 
-	private String email;
-	private String username;
-	private String password;
-	HashMap<User, ArrayList<Buyable>> orders;
+public class Administrator extends Information{
 	
-	private Administrator(String name, String email, String username, String password) {
-		if(name!=null && !name.isEmpty()){
-			this.name = name;
-		}
-		else{
-			System.out.println("Wrong name");
-		}
-		
-		//strong code for e-mail 
-		this.email = email;
-		this.username = username;
-		//strong password code?
-		this.password = password;
-		this.orders = new HashMap<>();
+	// singleton administrator
+	private Administrator(String firstName, String lastName, int age, String phoneNumber, String email, String password) {
+		super(firstName, lastName, age, phoneNumber, email, password);
 	}
+	
 	private static Administrator adminInstance;
-	public static Administrator getInstance(String name, String email, String username, String password){
+	public static Administrator getInstance(String name, String lastName, int age, String email, String username, String password){
 		if(adminInstance == null){
-			adminInstance = new Administrator(name, email, username, password);
+			adminInstance = new Administrator(name, lastName, age, email, username, password);
 		}
 		return adminInstance;		
 	}
 	
-	public void addProduct(Buyable b){
-		
+	public void addProduct(Buyable product){
+		// TODO
 	}
-	public void takeOrder(User u, ArrayList<Buyable> list){
-		this.orders.put(u, list);
-	}
+	
 	
 }
