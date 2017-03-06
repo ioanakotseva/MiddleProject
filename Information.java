@@ -1,18 +1,18 @@
 package shop;
 
-import users.Cart;
-
 public abstract class Information {
-	
+
+
 	private String firstName;
 	private String lastName;
 	private int age;
 	private String phoneNumber;
 	private String email;
 	private String password;
-	protected Shop shop; // TODO relations 
+	protected static Shop shop;
 	
 	public Information(String firstName, String lastName, int age, String phoneNumber, String email, String password) {
+		this.shop = Shop.getInstace("Shoes Shop");
 		if(firstName != null && !firstName.isEmpty() && lastName != null && !lastName.isEmpty()){
 			this.firstName = firstName;
 			this.lastName = lastName;
@@ -72,8 +72,10 @@ public abstract class Information {
 				counter++;
 			}
 		}
-		if(counter==1 && mail.charAt(mail.length()-4)=='.' && mail.charAt(mail.length()-3)=='c' &&
-				mail.charAt(mail.length()-2)=='o' && mail.charAt(mail.length()-1)=='m'){
+		if(counter==1 && ((mail.charAt(mail.length()-4)=='.' && mail.charAt(mail.length()-3)=='c' &&
+				mail.charAt(mail.length()-2)=='o' && mail.charAt(mail.length()-1)=='m')) || 
+				(mail.charAt(mail.length()-3)=='.' && mail.charAt(mail.length()-2)=='b' &&
+				mail.charAt(mail.length()-1)=='g')){
 			return true;
 		}
 		return false;
@@ -89,7 +91,7 @@ public abstract class Information {
 		}
 		
 		for(char c : password.toCharArray()){
-			if(c >= 'a' && c <= 'a'){
+			if(c >= 'a' && c <= 'z'){
 				hasSmallLetter = true;
 			}
 			if(c >= 'A' && c <= 'Z'){
@@ -104,6 +106,11 @@ public abstract class Information {
 		}
 		return false;
 	}
+
+	public String getFirstName() {
+		return firstName;
+	}
 	
 	
 }
+

@@ -1,23 +1,50 @@
 package shop;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
 public class Administrator extends Information{
+
 	
-	// singleton administrator
+	HashMap<User, ArrayList<Buyable>> orders;
+	
 	private Administrator(String firstName, String lastName, int age, String phoneNumber, String email, String password) {
 		super(firstName, lastName, age, phoneNumber, email, password);
+		this.orders = new HashMap<>();
 	}
 	
 	private static Administrator adminInstance;
-	public static Administrator getInstance(String name, String lastName, int age, String email, String username, String password){
+	public static Administrator getInstance(String firstName, String lastName, int age, String phoneNumber, String email, String password){
 		if(adminInstance == null){
-			adminInstance = new Administrator(name, lastName, age, email, username, password);
+			adminInstance = new Administrator(firstName, lastName, age , phoneNumber, email, password);
 		}
 		return adminInstance;		
 	}
 	
-	public void addProduct(Buyable product){
-		// TODO
+	public void addNewProduct(Buyable b){
+			shop.addProd(b);
 	}
+	
+	public void sendProducts(){
+		for (Map.Entry<User, ArrayList<Buyable>> entry : orders.entrySet()) {
+			User user = entry.getKey();
+			ArrayList<Buyable> list = entry.getValue();
+			for (Buyable b : list) {
+				shop.sellProduct(b);
+			}
+		}
+		System.out.println("All products are send");
+	}
+	
+	public void addInOrders(User u, ArrayList<Buyable> list){
+		this.orders.put(u, list);
+	}
+
+	
 	
 	
 }

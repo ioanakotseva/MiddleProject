@@ -3,13 +3,18 @@ package shop;
 public abstract class WomanShoes extends Shoes {
 
 	
-	public class SportWoman extends WomanShoes{
+	public static class SportWoman extends WomanShoes{
 		public SportWoman(String name, String color, int size, double price, String description) {
 			super(name, color, size, price, description);
 		}
+
+		@Override
+		public String getName() {
+			return this.getName();
+		}
 	}
 	
-	public class FormalWoman extends WomanShoes {
+	public static class FormalWoman extends WomanShoes {
 		private double heelSize;
 		public FormalWoman(String name, String color, int size, double price, double heelSize, String description) {
 			super(name, color, size, price, description);
@@ -20,11 +25,20 @@ public abstract class WomanShoes extends Shoes {
 				this.heelSize = 0;
 			}
 		}
+		@Override
+		public String getName() {
+			return this.getName();
+		}
 	}
 	
-	public class DailyWoman extends WomanShoes{
+	public static class DailyWoman extends WomanShoes{
 		public DailyWoman(String name, String color, int size, double price, String description) {
 			super(name, color, size, price, description);
+		}
+
+		@Override
+		public String getName() {
+			return this.getName();
 		}
 	}
 	

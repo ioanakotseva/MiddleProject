@@ -6,7 +6,7 @@ public class Bags implements Buyable{
 	private String color;
 	private String text;
 	private double price;
-	
+	private int availability;
 	public Bags(String name, String color, double price, String text){
 		if(name!=null && !name.isEmpty()){
 			this.name = name;
@@ -14,6 +14,7 @@ public class Bags implements Buyable{
 		else{
 			this.name = "Bag";
 		}
+		this.availability = 10;
 		if(color!=null && !color.isEmpty()){
 			this.color = color;
 		}
@@ -36,6 +37,22 @@ public class Bags implements Buyable{
 
 	public double getPrice() {
 		return price;
+	}
+
+	@Override
+	public String getName() {
+		return name;
+	}
+
+	@Override
+	public int getAvailability() {
+		return availability;
+	}
+
+	@Override
+	public int setAvailability(int i) {
+		this.availability = i;
+		return this.availability;
 	}
 	
 	

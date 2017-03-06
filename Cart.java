@@ -1,34 +1,34 @@
-package users;
+package shop;
 
 import java.util.ArrayList;
 
-import shop.Buyable;
-
 public class Cart {
 
-	protected ArrayList<Buyable> products;
+	ArrayList<Buyable> products;
 	private double price;
-	private int numberOfProducts;
-	//when addInCart(products) -> price+=poducts.price
+	private int numberOfProd;
 	
 	public Cart() {
-		this.products = new ArrayList<Buyable>();
+		this.products = new ArrayList<>();
 		this.price = 0;
-		this.numberOfProducts = 0;
+		this.numberOfProd=0;
 	}
 	
-	public void addProduct(Buyable b){
+	public void addIn(Buyable b){
 		this.products.add(b);
 		this.price += b.getPrice();
-		this.numberOfProducts++;
+		this.numberOfProd++;
 	}
-	public void removeProduct(Buyable b){
+	public void remove(Buyable b){
 		if(products.contains(b)){
 			this.products.remove(b);
+			this.numberOfProd--;
+			this.price-=b.getPrice();
 		}
 	}
 	public void clearAll(){
 		this.products.clear();
 	}
-
+	
+	
 }
