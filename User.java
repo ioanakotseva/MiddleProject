@@ -14,6 +14,9 @@ public class User extends Information{
 	public void singUp(){
 		this.shop.addUser(this);
 	}
+	public void logIn(){
+		// TODO
+	}
 	public void addInCart(Buyable b){
 		this.cart.addIn(b);
 	}
