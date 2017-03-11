@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background=""
+    tools:context="com.example.ioana.projectshoesshop.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="username"
+        android:fontFamily="serif"
+        android:textSize="25sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/username_textView"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="password"
+        android:fontFamily="serif"
+        android:textSize="25sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:maxLength="15"
+        android:id="@+id/password_textView"/>
+
+   <Button
+       android:id="@+id/logIn_Button"
+       android:text="Log In"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:onClick="tryLogIn"/>
+
+    <Button
+        android:id="@+id/singIn_Button"
+        android:text="Sing In"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
