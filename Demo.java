@@ -10,23 +10,20 @@ import shop.WomanShoes.SportWoman;
 public class Demo {
 
 	public static void main(String[] args) {
-		 
-		
-		
-		
+
 		Shop shop = Shop.getInstace("Shoes Shop");
 		
 		Administrator admin = Administrator.getInstance("Ioana", "Kotseva", 20, "0895550175", "ioana.kotseva@gmail.com", "Yoana.kotseva96");
 		shop.addAdministrator(admin);
 		System.out.println(shop.toString());
 		
-		Buyable kec = new SportWoman("Kec", "black", 38, 24.5, "Udobni za tichane!");
-		Buyable official = new FormalWoman("Qna", "black&red", 38, 52, 12.4, "Visok tok!");
-		Buyable balerina = new DailyWoman("Balerinka", "red", 38, 32, "Podhodqshti za vseki den!");
-		Buyable maratonka = new SportMan("Nike Air", "blue&white", 43, 105, "Za tichane1!", true);
-		Buyable skin = new FormalMan("Skin Shoes", "brown", 43, 87.5, "Za oficialen sl!", false);
-		Buyable cubinka = new DailyMan("Kubinka", "yellow", 43, 54, "Tejki i plytni!");
-		Buyable chanta = new Bags("Kali", "red", 45, "Modern bag!");
+		Product kec = new SportWoman("Kec", "black", "Udobni za tichane!", 24.5, 38);
+		Product official = new FormalWoman("Qna", "black&red",  "Visok tok!", 52, 38, 12.4);
+		Product balerina = new DailyWoman("Balerinka", "red", "Podhodqshti za vseki den!", 32, 38);
+		Product maratonka = new SportMan("Nike Air", "blue&white", "Za tichane1!", 105, 43, true);
+		Product skin = new FormalMan("Skin Shoes", "brown", "Za oficialen sl!", 87.5, 43, false);
+		Product cubinka = new DailyMan("Kubinka", "yellow",  "Tejki i plytni!", 54, 43);
+		Product chanta = new Bags("Kali", "red", "Modern bag!", 45);
 		System.out.println("========================");
 		
 		admin.addNewProduct(kec);
@@ -36,23 +33,15 @@ public class Demo {
 		admin.addNewProduct(skin);
 		admin.addNewProduct(cubinka);
 		admin.addNewProduct(chanta);
+		
 		User diana = new User("Diana", "Kotseva", 26, "0895550173", "di.kotseva@gmail.com","Diana.kotseva90");
 		User vladimir = new User("Vladimir", "Iv", 30, "0894216215", "ninjata_stunt@abv.bg","VladkataStunt.636");
 		
-		diana.singUp();
-		vladimir.singUp();
 		
 		
 		
-		diana.addInCart(official);
-		diana.addInCart(balerina);
-		vladimir.addInCart(skin);
-		vladimir.addInCart(maratonka);
 		
-		diana.makeOrder();
-		vladimir.makeOrder();
 		
-		admin.sendProducts();
 	}
 
 }

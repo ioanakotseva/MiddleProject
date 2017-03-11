@@ -3,24 +3,56 @@ package shop;
 public class User extends Information{
 
 	private Cart cart;
-	private Administrator admin;
+	private static Administrator admin = Administrator.getInstance();
+	private Shop shop;
+	
 	public User(String firstName, String lastName, int age, String phoneNumber, String email, String password){
 		super(firstName, lastName, age, phoneNumber, email, password);
-			this.cart = new Cart();
-			this.shop.addUser(this);
-			this.admin = Administrator.getInstance("Ioana", "Kotseva", 20, "0895550175", "ioana.kotseva@gmail.com", "Yoana.kotseva96");
+		this.cart = new Cart();
+		// this.shop.addUser(this);
+		// this.admin = Administrator.getInstance("Ioana", "Kotseva", 20, "0895550175", "ioana.kotseva@gmail.com", "Yoana.kotseva96");
 	}
 	
-	public void singUp(){
-		this.shop.addUser(this);
+	static void signUp(String firstName, String lastName, int age, String phoneNumber, String email, String password){
+		
 	}
-	public void logIn(){
+	public void deleteAccount(){
+		this.shop.getUsers().remove(this);
+	}
+	public boolean logIn(String email, String password){
+		// logIn will return true, if your logging is successful
+		if(!shop.containsEmail(email)){
+			return false;
+		}
+		if(this.getPassword().equals(password)){
+			return true;
+		}
+		System.out.println("Invalid e-mail or password!");
+		return false;
+	}
+	public void logOut(){
+		System.out.println("Logging out ..");
 		// TODO
 	}
-	public void addInCart(Buyable b){
-		this.cart.addIn(b);
+	
+	public void changePassword(String oldPassword, String newPassword, String newPasswordAgain){
+		if(!this.getPassword().equals(oldPassword)){
+			System.out.println("Wrong password!");
+			return;
+		}
+		if(!newPassword.equals(newPasswordAgain)){
+			System.out.println("Passwords confirmation error!");
+			return;
+		}
+		this.setPassword(newPassword);
 	}
-	public void removeFromCart(Buyable b){
+	
+	
+	public void addInCart(Product b){
+		// TODO
+		// this.cart.addIn(b);
+	}
+	public void removeFromCart(Product b){
 		this.cart.remove(b);
 	}
 	public void clearAllCart(){
@@ -28,10 +60,12 @@ public class User extends Information{
 	}
 	
 	public void makeOrder(){
-		this.admin.addInOrders(this, cart.products);
-		this.cart.clearAll();
+		// TODO
+		// not working
+		// this.admin.addInOrders(this, cart.products);
+		// this.cart.clearAll();
 	}
-
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -57,5 +91,9 @@ public class User extends Information{
 		return true;
 	}
 	
+	@Override
+	public String toString() {
+		return this.toString() + " | " + admin.getFirstName() + " | " + shop.getName() + "]";
+	}
 	
 }
