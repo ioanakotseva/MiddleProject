@@ -4,22 +4,24 @@ import java.util.ArrayList;
 
 public class Cart {
 
-	ArrayList<Buyable> products;
-	private double price;
+	private ArrayList<Product> products;
 	private int numberOfProd;
+	private double price;
 	
 	public Cart() {
 		this.products = new ArrayList<>();
 		this.price = 0;
-		this.numberOfProd=0;
+		this.numberOfProd = 0;
 	}
 	
-	public void addIn(Buyable b){
-		this.products.add(b);
-		this.price += b.getPrice();
-		this.numberOfProd++;
+	public void addIn(Product b){
+		if(b != null && b.getAvailability() > 0){
+			this.products.add(b);
+			this.price += b.getPrice();
+			this.numberOfProd++;
+		}
 	}
-	public void remove(Buyable b){
+	public void remove(Product b){
 		if(products.contains(b)){
 			this.products.remove(b);
 			this.numberOfProd--;
@@ -29,6 +31,5 @@ public class Cart {
 	public void clearAll(){
 		this.products.clear();
 	}
-	
 	
 }

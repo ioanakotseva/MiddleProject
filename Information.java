@@ -2,7 +2,6 @@ package shop;
 
 public abstract class Information {
 
-
 	private String firstName;
 	private String lastName;
 	private int age;
@@ -26,9 +25,7 @@ public abstract class Information {
 		if(isValidEmail(email)){
 			this.email = email;
 		}
-		if(password != null && !password.isEmpty() && isStrongPassword(password)){
-			this.password = password;
-		}
+		setPassword(password);
 	}
 	
 	static boolean isValidPhone(String number){
@@ -80,7 +77,7 @@ public abstract class Information {
 		}
 		return false;
 	}
-	private boolean isStrongPassword(String password){
+	static boolean isStrongPassword(String password){
 		// A strong password has at least 5 symbols( small letters, capital letters and digits).
 		boolean hasSmallLetter = false;
 		boolean hasCapitalLetter = false;
@@ -110,7 +107,28 @@ public abstract class Information {
 	public String getFirstName() {
 		return firstName;
 	}
-	
+	public String getLastName() {
+		return lastName;
+	}
+	public String getEmail() {
+		return this.email;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		if(password != null && !password.isEmpty() && isStrongPassword(password)){
+			this.password = password;
+		}
+	}
+
+	@Override
+	public String toString() {
+		return "User[" + firstName + " | " + lastName + " | " + age + " | " + age + " | " + phoneNumber + 
+				" | " + email + " | " + password + " | " +
+				shop.getName() + " ]" ;			
+	}
 	
 }
+
 
