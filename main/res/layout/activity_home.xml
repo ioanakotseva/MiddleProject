@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal">
+
+    <Button
+        android:id="@+id/womanShoesButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_weight="1"
+        android:text="@string/woman_shoes" />
+
+    <Button
+        android:id="@+id/manShoesButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_weight="1"
+        android:text="@string/man_shoes" />
+
+    <Button
+        android:id="@+id/bagsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_weight="1"
+        android:text="@string/bags" />
+</LinearLayout>
