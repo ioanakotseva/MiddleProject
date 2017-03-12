@@ -16,6 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.ioana.projectshoesshop.SuccessfulRegistrationActivity" />
+        <activity android:name="com.example.ioana.projectshoesshop.WomanShoesActivity" />
+        <activity android:name="com.example.ioana.projectshoesshop.ManShoesActivity" />
+        <activity android:name="com.example.ioana.projectshoesshop.BagsActivity" />
+        <activity android:name="com.example.ioana.projectshoesshop.ShoppingCartActivity" />
+        <activity android:name="com.example.ioana.projectshoesshop.ChangePasswordActivity"></activity>
     </application>
 
 </manifest>

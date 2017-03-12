@@ -10,4 +10,8 @@
     <string name="new_passwod">new password</string>
     <string name="confirm_new_passwrd">confirm new password</string>
     <string name="contacts">Contacts</string>
+    <string name="log_in">Log In</string>
+    <string name="welcome">Welcome, User!</string>
+    <string name="home_page">Home</string>
+    <string name="successful_reg_text">"You'r registration was successfully created! Click Home button below to go to your Home Page."</string>
 </resources>

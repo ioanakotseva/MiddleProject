@@ -34,4 +34,6 @@
         android:layout_weight="1"
         android:textSize="15sp"
         android:text="@string/bags" />
+
+
 </LinearLayout>
