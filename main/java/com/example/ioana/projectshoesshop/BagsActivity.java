@@ -1,4 +1,4 @@
-package com.example.ioana.projectshoesshop;
+package com.example.ioana.shoesshop;
 
 /**
  * Created by Ioana on 11.03.2017 г..

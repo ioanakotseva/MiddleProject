@@ -1,5 +1,6 @@
-package com.example.ioana.projectshoesshop;
+package com.example.ioana.shoesshop;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,11 +14,11 @@ import java.util.HashSet;
 public class MainActivity extends AppCompatActivity {
 
 
-    HashSet<User> users;
     private Button logInButton;
     private Button singInButton;
     private EditText username;
     private EditText password;
+    Shop shop = Shop.getInstace("Shoes Shop");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(validData()) {
                     Toast.makeText(MainActivity.this, "User data is valid", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                    MainActivity.this.startActivity(intent);
                 }
                 else{
                     Toast.makeText(MainActivity.this, "User data is not valid", Toast.LENGTH_SHORT).show();
@@ -43,21 +46,31 @@ public class MainActivity extends AppCompatActivity {
         };
 
         logInButton.setOnClickListener(listen);
+        singInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RegistrationActivity.class);
+                MainActivity.this.startActivity(intent);
+
+            }
+        });
 
     }
 
     private boolean validData() {
-        for (User user : users){
-           String email = user.getEmail();
-            String pass = user.getPassword();
-            if(this.username.getText().toString().equals(email) && this.password.getText().toString().equals(pass)){
-                return true;
+        if(shop.getUsers().size()>0) {
+            for (User user : shop.getUsers()) {
+                String email = user.getEmail();
+                String pass = user.getPassword();
+                if (this.username.getText().toString().equals(email) && this.password.getText().toString().equals(pass)) {
+                    return true;
+                }
             }
+            return false;
         }
+        Toast.makeText(MainActivity.this, "No users", Toast.LENGTH_SHORT).show();
         return false;
     }
 
-    public void tryLogIn(View view) {
-        Toast.makeText(this, "This is a log in attempt", Toast.LENGTH_SHORT).show();
-    }
+
 }

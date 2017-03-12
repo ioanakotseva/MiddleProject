@@ -1,38 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:layout_gravity="center_horizontal">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <Button
         android:id="@+id/womanShoesButton"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
         android:textStyle="bold"
-        android:textSize="25sp"
+        android:textSize="15sp"
         android:layout_weight="1"
-        android:text="@string/woman_shoes" />
+        android:text="Woman Shoes" />
 
     <Button
         android:id="@+id/manShoesButton"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
         android:textStyle="bold"
-        android:textSize="25sp"
+        android:textSize="15sp"
         android:layout_weight="1"
-        android:text="@string/man_shoes" />
+        android:text="Man Shoes" />
 
     <Button
         android:id="@+id/bagsButton"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
         android:textStyle="bold"
-        android:textSize="25sp"
+        android:textSize="15sp"
         android:layout_weight="1"
-        android:text="@string/bags" />
+        android:text="Bags" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home Page..."
+        android:fontFamily="cursive"
+        android:textSize="45sp"/>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shoespic"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/contacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:text="Contacts" />
+
+        <Button
+            android:id="@+id/myAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:text="My Account" />
+        <Button
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:text="Setting" />
+    </LinearLayout>
 </LinearLayout>

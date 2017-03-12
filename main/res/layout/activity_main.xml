@@ -7,7 +7,16 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background=""
-    tools:context="com.example.ioana.projectshoesshop.MainActivity">
+    tools:context="com.example.ioana.shoesshop.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shoes Shop"
+        android:textSize="45sp"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -34,12 +43,12 @@
         android:maxLength="15"
         android:id="@+id/password_textView"/>
 
-   <Button
-       android:id="@+id/logIn_Button"
-       android:text="Log In"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:onClick="tryLogIn"/>
+    <Button
+        android:id="@+id/logIn_Button"
+        android:text="Log In"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="tryLogIn"/>
 
     <Button
         android:id="@+id/singIn_Button"
@@ -47,5 +56,4 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-
-</LinearLayout>
+    </LinearLayout>

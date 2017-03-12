@@ -1,6 +1,5 @@
-package shop;
+package com.example.ioana.shoesshop;
 
-import shop.Shoes.Type;
 
 public abstract class WomanShoes extends Shoes {
 

@@ -1,4 +1,4 @@
-package com.example.nikoleta.projectshoes;
+package com.example.ioana.shoesshop;
 
 /**
  * Created by Nikoleta on 3/12/2017.
