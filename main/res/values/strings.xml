@@ -14,4 +14,6 @@
     <string name="welcome">Welcome, User!</string>
     <string name="home_page">Home</string>
     <string name="successful_reg_text">"You'r registration was successfully created! Click Home button below to go to your Home Page."</string>
+    <string name="strong_password_expectations">"A strong password should contains at least 5 symbols( small letters, capital letters and digits)"</string>
+    <string name="match_passwords">"The new password and confirmation password do not match."</string>
 </resources>

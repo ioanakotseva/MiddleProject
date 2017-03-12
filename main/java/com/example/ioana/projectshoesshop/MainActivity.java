@@ -12,6 +12,7 @@ import com.example.ioana.projectshoesshop.shop.User;
 import com.example.nikoleta.projectshoes.R;
 
 import java.util.HashSet;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
