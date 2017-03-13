@@ -5,12 +5,40 @@ import android.os.Bundle;
 
 import com.example.ioana.shoesshop.R;
 
+import java.util.ArrayList;
+
 
 public class ShoppingCartActivity extends AppCompatActivity {
+
+    private ArrayList<Product> products;
+    private double price;
+    private int numberOfProd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shoppingcart);
+        setContentView(R.layout.activity_shopping_cart);
+    }
+
+    public ShoppingCartActivity() {
+        this.products = new ArrayList<>();
+        this.price = 0;
+        this.numberOfProd=0;
+    }
+
+    public void addIn(Product b){
+        this.products.add(b);
+        this.price += b.getPrice();
+        this.numberOfProd++;
+    }
+    public void remove(Product b){
+        if(products.contains(b)){
+            this.products.remove(b);
+            this.numberOfProd--;
+            this.price-=b.getPrice();
+        }
+    }
+    public void clearAll(){
+        this.products.clear();
     }
 }

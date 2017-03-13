@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomeActivity">
+        <activity android:name="com.example.ioana.projectshoesshop.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,7 +23,8 @@
         <activity android:name="com.example.ioana.projectshoesshop.ShoppingCartActivity" />
         <activity android:name="com.example.ioana.projectshoesshop.ChangePasswordActivity" />
         <activity android:name="com.example.ioana.projectshoesshop.SettingsActivity"></activity>
-        <activity android:name=".RegistrationActivity"></activity>
+        <activity android:name="com.example.ioana.projectshoesshop.RegistrationActivity"></activity>
+        <activity android:name="com.example.ioana.projectshoesshop.MyAccountActivity"></activity>
     </application>
 
 </manifest>
