@@ -1,4 +1,4 @@
-package com.example.ioana.projectshoesshop;
+package com.example.ioana.shoesshop;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

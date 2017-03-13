@@ -1,4 +1,4 @@
-package shop;
+package com.example.ioana.shoesshop;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -109,6 +109,7 @@ public class Shop {
 			System.out.println(product);
 		}
 	}
+
 	
 }
 

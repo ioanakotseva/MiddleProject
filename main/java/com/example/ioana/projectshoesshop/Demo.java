@@ -1,4 +1,4 @@
-package shop;
+package com.example.ioana.shoesshop;
 
 import shop.ManShoes.DailyMan;
 import shop.ManShoes.FormalMan;

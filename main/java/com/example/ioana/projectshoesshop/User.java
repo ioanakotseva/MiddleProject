@@ -1,4 +1,4 @@
-package shop;
+package com.example.ioana.shoesshop;
 
 public class User extends Information{
 

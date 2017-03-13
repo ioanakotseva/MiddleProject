@@ -1,4 +1,4 @@
-package shop;
+package com.example.ioana.shoesshop;
 
 public abstract class Shoes extends Product{
 

@@ -1,4 +1,4 @@
-package shop;
+package com.example.ioana.shoesshop;
 
 import java.util.ArrayList;
 
