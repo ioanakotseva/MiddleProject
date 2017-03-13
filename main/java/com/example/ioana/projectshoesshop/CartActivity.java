@@ -3,9 +3,11 @@ package com.example.ioana.shoesshop;
 /**
  * Created by Ioana on 11.03.2017 г..
  */
+import com.example.ioana.projectshoesshop.shop.Product;
+
 import java.util.ArrayList;
 public class CartActivity {
-    ArrayList<Buyable> products;
+    ArrayList<Product> products;
     private double price;
     private int numberOfProd;
 
@@ -15,12 +17,12 @@ public class CartActivity {
         this.numberOfProd=0;
     }
 
-    public void addIn(Buyable b){
+    public void addIn(Product b){
         this.products.add(b);
         this.price += b.getPrice();
         this.numberOfProd++;
     }
-    public void remove(Buyable b){
+    public void remove(Product b){
         if(products.contains(b)){
             this.products.remove(b);
             this.numberOfProd--;

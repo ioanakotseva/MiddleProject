@@ -1,60 +1,56 @@
 package com.example.ioana.shoesshop;
 
-/**
- * Created by Ioana on 11.03.2017 г..
- */
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
-public class BagsActivity implements Buyable {
-    private String name;
-    private String color;
-    private String text;
-    private double price;
-    private int availability;
-    public BagsActivity(String name, String color, double price, String text){
-        if(name!=null && !name.isEmpty()){
-            this.name = name;
-        }
-        else{
-            this.name = "Bag";
-        }
-        this.availability = 10;
-        if(color!=null && !color.isEmpty()){
-            this.color = color;
-        }
-        else{
-            this.color = "black";
-        }
-        if(price>0){
-            this.price = price;
-        }
-        else{
-            this.price = 4;
-        }
-        if(text!=null && !text.isEmpty()){
-            this.text = text;
-        }
-        else{
-            this.text= "No Description!";
-        }
-    }
+import com.example.nikoleta.projectshoes.R;
 
-    public double getPrice() {
-        return price;
-    }
+public class BagsActivity extends AppCompatActivity {
+
+    private Button womanShoesButton;
+    private Button manShoesButton;
+    private Button bagsButton;
 
     @Override
-    public String getName() {
-        return name;
-    }
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_woman_shoes);
 
-    @Override
-    public int getAvailability() {
-        return availability;
-    }
+        womanShoesButton = (Button) this.findViewById(R.id.womanShoesButton);
+        manShoesButton = (Button) this.findViewById(R.id.manShoesButton);
+        bagsButton = (Button) this.findViewById(R.id.bagsButton);
 
-    @Override
-    public int setAvailability(int i) {
-        this.availability = i;
-        return this.availability;
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BagsActivity.this, WomanShoesActivity.class);
+                BagsActivity.this.startActivity(intent);
+                finish();
+            }
+        };
+        womanShoesButton.setOnClickListener(listener);
+
+        View.OnClickListener listener1 = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BagsActivity.this, ManShoesActivity.class);
+                BagsActivity.this.startActivity(intent);
+                finish();
+            }
+        };
+        manShoesButton.setOnClickListener(listener1);
+
+        View.OnClickListener listener2 = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BagsActivity.this, BagsActivity.class);
+                BagsActivity.this.startActivity(intent);
+                finish();
+            }
+        };
+        bagsButton.setOnClickListener(listener2);
     }
 }

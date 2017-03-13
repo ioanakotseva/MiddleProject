@@ -1,58 +1,59 @@
 package com.example.ioana.shoesshop;
 
-/**
- * Created by Ioana on 11.03.2017 г..
- */
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
-public abstract class WomanShoesActivity extends Shoes {
+import com.example.ioana.projectshoesshop.shop.WomanShoes;
+import com.example.nikoleta.projectshoes.R;
 
-    public static class SportWoman extends WomanShoesActivity{
-        public SportWoman(String name, String color, int size, double price, String description) {
-            super(name, color, size, price, description);
-        }
+public class WomanShoesActivity extends AppCompatActivity {
 
-        @Override
-        public String getName() {
-            return this.getName();
-        }
-    }
+    private Button womanShoesButton;
+    private Button manShoesButton;
+    private Button bagsButton;
 
-    public static class FormalWoman extends WomanShoesActivity {
-        private double heelSize;
-        public FormalWoman(String name, String color, int size, double price, double heelSize, String description) {
-            super(name, color, size, price, description);
-            if(heelSize>0 && heelSize<=30){
-                this.heelSize = heelSize;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_woman_shoes);
+
+        womanShoesButton = (Button) this.findViewById(R.id.womanShoesButton);
+        manShoesButton = (Button) this.findViewById(R.id.manShoesButton);
+        bagsButton = (Button) this.findViewById(R.id.bagsButton);
+
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WomanShoesActivity.this, WomanShoesActivity.class);
+                WomanShoesActivity.this.startActivity(intent);
+                finish();
             }
-            else{
-                this.heelSize = 0;
+        };
+        womanShoesButton.setOnClickListener(listener);
+
+        View.OnClickListener listener1 = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WomanShoesActivity.this, ManShoesActivity.class);
+                WomanShoesActivity.this.startActivity(intent);
+                finish();
             }
-        }
-        @Override
-        public String getName() {
-            return this.getName();
-        }
+        };
+        manShoesButton.setOnClickListener(listener1);
+
+        View.OnClickListener listener2 = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WomanShoesActivity.this, BagsActivity.class);
+                WomanShoesActivity.this.startActivity(intent);
+                finish();
+            }
+        };
+        bagsButton.setOnClickListener(listener2);
+
     }
-
-    public static class DailyWoman extends WomanShoesActivity{
-        public DailyWoman(String name, String color, int size, double price, String description) {
-            super(name, color, size, price, description);
-        }
-
-        @Override
-        public String getName() {
-            return this.getName();
-        }
-    }
-
-    public WomanShoesActivity(String name, String color, int size, double price, String description) {
-        super(name, Type.WOMAN, color, price, description);
-        if(size>=36 && size<=41){
-            super.setSize(size);
-        }
-        else{
-            super.setSize(35);
-        }
-    }
-
 }

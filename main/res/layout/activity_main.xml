@@ -15,8 +15,7 @@
         android:text="Shoes Shop"
         android:textSize="45sp"
         android:fontFamily="cursive"
-        android:gravity="center"
-        />
+        android:gravity="center"/>
 
     <TextView
         android:layout_width="wrap_content"
