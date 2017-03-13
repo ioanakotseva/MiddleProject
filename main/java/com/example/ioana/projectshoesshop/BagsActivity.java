@@ -1,4 +1,4 @@
-package com.example.ioana.shoesshop;
+package com.example.ioana.projectshoesshop;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,7 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.nikoleta.projectshoes.R;
+import com.example.ioana.shoesshop.ManShoesActivity;
+import com.example.ioana.shoesshop.WomanShoesActivity;
+import com.example.ioana.shoesshop.R;
+
 
 public class BagsActivity extends AppCompatActivity {
 

@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    style="@style/VerticalLinearLayoutOrientation"
     android:gravity="center"
-    android:background=""
-    tools:context="com.example.ioana.shoesshop.MainActivity">
+    tools:context="com.example.ioana.projectshoesshop.MainActivity">
 
     <TextView
         android:layout_width="match_parent"

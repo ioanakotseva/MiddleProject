@@ -1,19 +1,18 @@
-package com.example.ioana.shoesshop;
+package com.example.ioana.projectshoesshop;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.ioana.projectshoesshop.shop.User;
-import com.example.nikoleta.projectshoes.R;
+import com.example.ioana.shoesshop.R;
+import com.example.ioana.projectshoesshop.RegistrationActivity;
+import com.example.ioana.projectshoesshop.Shop;
+import com.example.ioana.projectshoesshop.User;
 
-import java.util.HashSet;
-import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 

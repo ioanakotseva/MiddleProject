@@ -2,14 +2,15 @@ package com.example.ioana.projectshoesshop;
 
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.ioana.projectshoesshop.shop.ManShoes;
-import com.example.ioana.projectshoesshop.shop.WomanShoes;
-import com.example.nikoleta.projectshoes.R;
+import com.example.ioana.shoesshop.ManShoesActivity;
+import com.example.ioana.shoesshop.R;
+import com.example.ioana.shoesshop.WomanShoesActivity;
+
 
 public class HomeActivity extends AppCompatActivity {
 

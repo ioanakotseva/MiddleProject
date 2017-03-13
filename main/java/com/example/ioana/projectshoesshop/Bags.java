@@ -1,6 +1,8 @@
-package com.example.ioana.shoesshop;
+package com.example.ioana.projectshoesshop;
 
-public class Bags extends Product{
+import com.example.ioana.shoesshop.Product;
+
+public class Bags extends Product {
 
 	public Bags(String name, String color, String description, double price){
 		super(name, color, description, price);

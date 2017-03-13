@@ -1,13 +1,13 @@
-package com.example.ioana.shoesshop;
+package com.example.ioana.projectshoesshop;
 
 /**
  * Created by Ioana on 11.03.2017 г..
  */
-import com.example.ioana.projectshoesshop.shop.Product;
+import com.example.ioana.projectshoesshop.Product;
 
 import java.util.ArrayList;
 public class CartActivity {
-    ArrayList<Product> products;
+    private ArrayList<Product> products;
     private double price;
     private int numberOfProd;
 

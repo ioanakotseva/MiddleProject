@@ -1,16 +1,12 @@
-package com.example.ioana.shoesshop;
+package com.example.ioana.projectshoesshop;
+
+import android.util.Log;
+import com.example.ioana.projectshoesshop.User;
+import com.example.ioana.projectshoesshop.User;
+import com.example.ioana.projectshoesshop.Information;
 
 import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.TreeMap;
-import java.util.TreeSet;
-
-import com.sun.javafx.collections.UnmodifiableListSet;
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
-
-import javafx.print.Collation;
 
 public class Shop {
 	
@@ -76,7 +72,7 @@ public class Shop {
 					buy.setAvailability(i);
 				}
 				else{
-					System.out.println("No availability");
+					Log.e("no_availability", "No availability!");
 				}
 			}
 		}

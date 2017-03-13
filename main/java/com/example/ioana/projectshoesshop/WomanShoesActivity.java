@@ -1,4 +1,4 @@
-package com.example.ioana.shoesshop;
+package com.example.ioana.projectshoesshop;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,8 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.ioana.projectshoesshop.shop.WomanShoes;
-import com.example.nikoleta.projectshoes.R;
+import com.example.ioana.projectshoesshop.WomanShoes;
+import com.example.ioana.shoesshop.R;
 
 public class WomanShoesActivity extends AppCompatActivity {
 
@@ -19,7 +19,7 @@ public class WomanShoesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_woman_shoes);
+        setContentView(R.layout.activity_womanshoes);
 
         womanShoesButton = (Button) this.findViewById(R.id.womanShoesButton);
         manShoesButton = (Button) this.findViewById(R.id.manShoesButton);

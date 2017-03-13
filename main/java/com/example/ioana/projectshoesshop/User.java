@@ -1,4 +1,7 @@
-package com.example.ioana.shoesshop;
+package com.example.ioana.projectshoesshop;
+
+import com.example.ioana.projectshoesshop.Information;
+import com.example.ioana.projectshoesshop.Administrator;
 
 public class User extends Information{
 
@@ -93,7 +96,8 @@ public class User extends Information{
 	
 	@Override
 	public String toString() {
-		return this.toString() + " | " + admin.getFirstName() + " | " + shop.getName() + "]";
+		return super.toString() + " | " + admin.getFirstName() + " | " + shop.getName() + "]";
 	}
-	
+
+
 }
