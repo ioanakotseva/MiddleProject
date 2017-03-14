@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.nikoleta.projectshoes.R;
 
 public class ChangePasswordActivity extends AppCompatActivity {
 
@@ -19,12 +18,12 @@ public class ChangePasswordActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_change_password);
+        setContentView(R.layout.activity_changepassword);
 
         changePassword = (Button) this.findViewById(R.id.changePassButton);
         oldPassword = this.findViewById(R.id.old_password).toString();
         newPassword = this.findViewById(R.id.new_password).toString();
-        confirmPassword = this.findViewById(R.id.confirmed_new_password).toString();
+        confirmPassword = this.findViewById(R.id.confirmed_password).toString();
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override

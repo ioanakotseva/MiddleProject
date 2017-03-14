@@ -1,58 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    style="@style/VerticalLinearLayoutOrientation"
     android:gravity="center"
-    android:background=""
-    tools:context="com.example.ioana.shoesshop.MainActivity">
+    android:background="@drawable/background_blurred"
+    tools:context="com.example.ioana.projectshoesshop.MainActivity"
+    android:padding="@android:dimen/app_icon_size" >
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Shoes Shop"
+        android:textStyle="bold"
         android:textSize="45sp"
         android:fontFamily="cursive"
         android:gravity="center"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="username"
-        android:fontFamily="serif"
-        android:textSize="25sp"/>
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="username"-->
+        <!--android:fontFamily="serif"-->
+        <!--android:textSize="25sp"/>-->
 
     <EditText
+        android:id="@+id/username_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/username_textView"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="password"
-        android:fontFamily="serif"
-        android:textSize="25sp"/>
+        android:textCursorDrawable="@color/black"
+        android:textColorLink="@color/black" />
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="password"-->
+        <!--android:fontFamily="serif"-->
+        <!--android:textSize="25sp"/>-->
 
     <EditText
+        android:id="@+id/password_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:maxLength="15"
-        android:id="@+id/password_textView"/>
+        android:textCursorDrawable="@color/black"
+        android:textColorLink="@color/black"/>
 
     <Button
         android:id="@+id/logIn_Button"
         android:text="Log In"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="tryLogIn"
+        android:background="@drawable/ovalbuttonshape"
+        android:textColorLink="@color/black"/>
+
+    <!--<Button-->
+        <!--android:id="@+id/singUp_Button"-->
+        <!--android:text="Sing Up"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/ovalbuttonshape"/>-->
+
+    <TextView
+        android:id="@+id/signUp_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="tryLogIn"/>
+        android:text="No account yet? Create one now!" />
 
-    <Button
-        android:id="@+id/singIn_Button"
-        android:text="Sing In"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    </LinearLayout>
+</LinearLayout>

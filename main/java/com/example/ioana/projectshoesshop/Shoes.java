@@ -1,8 +1,8 @@
-package com.example.ioana.shoesshop;
+package com.example.ioana.projectshoesshop;
 
 public abstract class Shoes extends Product{
 
-	enum Type {WOMAN, MAN};
+	protected enum Type {WOMAN, MAN};
 	private Type type;
 	private int size;
 	

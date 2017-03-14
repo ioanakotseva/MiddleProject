@@ -1,4 +1,5 @@
-package com.example.ioana.shoesshop;
+package com.example.ioana.projectshoesshop;
+
 
 public abstract class ManShoes extends Shoes {
 

@@ -1,13 +1,14 @@
-package com.example.ioana.shoesshop;
+package com.example.ioana.projectshoesshop;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
 
 public class RegistrationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registration2);
+        setContentView(R.layout.activity_registration);
     }
 }

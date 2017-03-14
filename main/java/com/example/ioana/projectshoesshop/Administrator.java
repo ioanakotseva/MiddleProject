@@ -1,13 +1,16 @@
-package com.example.ioana.shoesshop;
+package com.example.ioana.projectshoesshop;
+
+import com.example.ioana.projectshoesshop.User;
+import com.example.ioana.projectshoesshop.Product;
+import com.example.ioana.projectshoesshop.Shop;
+import com.example.ioana.projectshoesshop.Cart;
+import com.example.ioana.projectshoesshop.Information;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 
-public class Administrator extends Information{
+public class Administrator extends Information {
 
 	
 	HashMap<User, ArrayList<Product>> orders;
@@ -29,7 +32,7 @@ public class Administrator extends Information{
 	}
 	
 	public void addNewProduct(Product b){
-			shop.addProd(b);
+			// shop.addProd(b);
 	}
 	
 	public void sendProducts(){
@@ -37,7 +40,7 @@ public class Administrator extends Information{
 			User user = entry.getKey();
 			ArrayList<Product> list = entry.getValue();
 			for (Product b : list) {
-				shop.sellProduct(b);
+				// shop.sellProduct(b);
 			}
 		}
 		System.out.println("All products are send");
@@ -51,5 +54,6 @@ public class Administrator extends Information{
 	public String toString() {
 		return super.toString();
 	}
-	
+
+
 }

@@ -1,4 +1,8 @@
-package com.example.ioana.shoesshop;
+package com.example.ioana.projectshoesshop;
+
+import com.example.ioana.projectshoesshop.Information;
+import com.example.ioana.projectshoesshop.Administrator;
+
 
 public abstract class Information {
 
@@ -105,7 +109,7 @@ public abstract class Information {
 	}
 
 	public String getFirstName() {
-		return firstName;
+		return this.firstName;
 	}
 	public String getLastName() {
 		return lastName;

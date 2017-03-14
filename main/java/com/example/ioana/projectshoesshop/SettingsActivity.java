@@ -1,19 +1,20 @@
 package com.example.ioana.projectshoesshop;
 
-
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.nikoleta.projectshoes.R;
 
 public class SettingsActivity extends AppCompatActivity {
 
     private Button changePassword;
     private Button logOut;
     private Button deleteAccount;
+    private Button contactsButton;
+    private Button myAccountButton;
+    private Button settingsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,35 +24,62 @@ public class SettingsActivity extends AppCompatActivity {
         changePassword = (Button) this.findViewById(R.id.changePassButton);
         logOut = (Button) this.findViewById(R.id.logOutButton);
         deleteAccount = (Button) this.findViewById(R.id.deleteAccountButton);
+        contactsButton = (Button) this.findViewById(R.id.contacts);
+        myAccountButton = (Button) this.findViewById(R.id.myAccount);
+        settingsButton = (Button) this.findViewById(R.id.settings);
 
-        View.OnClickListener listener = new View.OnClickListener() {
+        changePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SettingsActivity.this, ChangePasswordActivity.class);
                 SettingsActivity.this.startActivity(intent);
                 finish();
             }
-        };
-        changePassword.setOnClickListener(listener);
+        });
 
-        View.OnClickListener listener1 = new View.OnClickListener() {
+        logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SettingsActivity.this, MainActivity.class);
                 SettingsActivity.this.startActivity(intent);
                 finish();
             }
-        };
-        logOut.setOnClickListener(listener1);
+        });
 
-        View.OnClickListener listener2 = new View.OnClickListener() {
+        deleteAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SettingsActivity.this, MainActivity.class);
                 SettingsActivity.this.startActivity(intent);
                 finish();
             }
-        };
-        deleteAccount.setOnClickListener(listener2);
+        });
+
+        contactsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SettingsActivity.this, ContactsActivity.class);
+                SettingsActivity.this.startActivity(intent);
+                finish();
+            }
+        });
+
+        myAccountButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SettingsActivity.this, MyAccountActivity.class);
+                SettingsActivity.this.startActivity(intent);
+                finish();
+            }
+        });
+
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SettingsActivity.this, SettingsActivity.class);
+                SettingsActivity.this.startActivity(intent);
+                finish();
+            }
+        });
     }
 }

@@ -1,16 +1,14 @@
 package com.example.ioana.projectshoesshop;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-/**
- * Created by Nikoleta on 3/12/2017.
- */
+import com.example.ioana.projectshoesshop.R;
 
-public class MyAccountActivity extends AppCompatActivity{
+public class ContactsActivity extends AppCompatActivity {
 
     private Button contactsButton;
     private Button myAccountButton;
@@ -19,7 +17,7 @@ public class MyAccountActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_myaccount);
+        setContentView(R.layout.activity_contacts);
 
         contactsButton = (Button) this.findViewById(R.id.contacts);
         myAccountButton = (Button) this.findViewById(R.id.myAccount);
@@ -28,8 +26,8 @@ public class MyAccountActivity extends AppCompatActivity{
         contactsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MyAccountActivity.this, ContactsActivity.class);
-                MyAccountActivity.this.startActivity(intent);
+                Intent intent = new Intent(ContactsActivity.this, ContactsActivity.class);
+                ContactsActivity.this.startActivity(intent);
                 finish();
             }
         });
@@ -37,8 +35,8 @@ public class MyAccountActivity extends AppCompatActivity{
         myAccountButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MyAccountActivity.this, MyAccountActivity.class);
-                MyAccountActivity.this.startActivity(intent);
+                Intent intent = new Intent(ContactsActivity.this, MyAccountActivity.class);
+                ContactsActivity.this.startActivity(intent);
                 finish();
             }
         });
@@ -46,8 +44,8 @@ public class MyAccountActivity extends AppCompatActivity{
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MyAccountActivity.this, SettingsActivity.class);
-                MyAccountActivity.this.startActivity(intent);
+                Intent intent = new Intent(ContactsActivity.this, SettingsActivity.class);
+                ContactsActivity.this.startActivity(intent);
                 finish();
             }
         });
