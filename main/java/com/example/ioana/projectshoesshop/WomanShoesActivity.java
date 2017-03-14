@@ -6,54 +6,82 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.ioana.projectshoesshop.WomanShoes;
-import com.example.ioana.shoesshop.R;
-
 public class WomanShoesActivity extends AppCompatActivity {
 
     private Button womanShoesButton;
     private Button manShoesButton;
     private Button bagsButton;
+    private Button contactsButton;
+    private Button settingsButton;
+    private Button myAccountButton;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_womanshoes);
+        setContentView(R.layout.activity_bags);
 
         womanShoesButton = (Button) this.findViewById(R.id.womanShoesButton);
         manShoesButton = (Button) this.findViewById(R.id.manShoesButton);
         bagsButton = (Button) this.findViewById(R.id.bagsButton);
+        contactsButton = (Button) this.findViewById(R.id.contacts);
+        myAccountButton = (Button) this.findViewById(R.id.myAccount);
+        settingsButton = (Button) this.findViewById(R.id.settings);
 
-        View.OnClickListener listener = new View.OnClickListener() {
+        womanShoesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(WomanShoesActivity.this, WomanShoesActivity.class);
                 WomanShoesActivity.this.startActivity(intent);
                 finish();
             }
-        };
-        womanShoesButton.setOnClickListener(listener);
+        });
 
-        View.OnClickListener listener1 = new View.OnClickListener() {
+
+        manShoesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(WomanShoesActivity.this, ManShoesActivity.class);
                 WomanShoesActivity.this.startActivity(intent);
                 finish();
             }
-        };
-        manShoesButton.setOnClickListener(listener1);
+        });
 
-        View.OnClickListener listener2 = new View.OnClickListener() {
+
+        bagsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(WomanShoesActivity.this, BagsActivity.class);
                 WomanShoesActivity.this.startActivity(intent);
                 finish();
             }
-        };
-        bagsButton.setOnClickListener(listener2);
+        });
 
+        contactsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WomanShoesActivity.this, ContactsActivity.class);
+                WomanShoesActivity.this.startActivity(intent);
+                finish();
+            }
+        });
+
+        myAccountButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WomanShoesActivity.this, MyAccountActivity.class);
+                WomanShoesActivity.this.startActivity(intent);
+                finish();
+            }
+        });
+
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WomanShoesActivity.this, SettingsActivity.class);
+                WomanShoesActivity.this.startActivity(intent);
+                finish();
+            }
+        });
     }
 }

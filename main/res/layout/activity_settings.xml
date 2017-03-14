@@ -18,10 +18,9 @@
         android:id="@+id/changePassButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:text="Change Password"
         android:fontFamily="casual"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center" />
 
     <Button
         android:id="@+id/logOutButton"

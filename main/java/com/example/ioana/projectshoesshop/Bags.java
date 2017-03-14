@@ -1,6 +1,6 @@
 package com.example.ioana.projectshoesshop;
 
-import com.example.ioana.shoesshop.Product;
+import com.example.ioana.projectshoesshop.Product;
 
 public class Bags extends Product {
 

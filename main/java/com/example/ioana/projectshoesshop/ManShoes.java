@@ -1,7 +1,5 @@
 package com.example.ioana.projectshoesshop;
 
-import com.example.ioana.shoesshop.Shoes;
-
 
 public abstract class ManShoes extends Shoes {
 

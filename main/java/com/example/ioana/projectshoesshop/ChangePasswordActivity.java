@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.ioana.shoesshop.R;
-
 
 public class ChangePasswordActivity extends AppCompatActivity {
 
