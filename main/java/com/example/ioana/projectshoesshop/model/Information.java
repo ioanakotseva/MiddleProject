@@ -1,7 +1,4 @@
-package com.example.ioana.projectshoesshop;
-
-import com.example.ioana.projectshoesshop.Information;
-import com.example.ioana.projectshoesshop.Administrator;
+package com.example.ioana.projectshoesshop.model;
 
 
 public abstract class Information {

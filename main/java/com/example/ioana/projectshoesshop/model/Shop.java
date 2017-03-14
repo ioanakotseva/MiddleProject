@@ -1,12 +1,10 @@
-package com.example.ioana.projectshoesshop;
+package com.example.ioana.projectshoesshop.model;
 
 import android.util.Log;
-import com.example.ioana.projectshoesshop.User;
-import com.example.ioana.projectshoesshop.User;
-import com.example.ioana.projectshoesshop.Information;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Random;
 
 public class Shop {
 	
@@ -17,6 +15,7 @@ public class Shop {
 	
 	//The Singleton pattern
 	private static Shop instance;
+	//together
 	private Shop(String name){
 		if(name!=null && !name.isEmpty()){
 			this.name = name;
@@ -26,6 +25,10 @@ public class Shop {
 		}
 		this.users = new HashSet<>();
 		this.availability = new ArrayList<>();
+
+
+
+
 	}
 	public static Shop getInstace(String name){
 		if(instance == null){
@@ -62,7 +65,7 @@ public class Shop {
 			this.users.add(user);
 		}
 	}
-	
+	//Ioana will try
 	public void sellProduct(Product b){
 		int i = 0;
 		for (Product buy : availability) {
@@ -82,19 +85,7 @@ public class Shop {
 			this.availability.add(buy);
 		}
 	}
-	
-	public void settings(){
-		// TODO
-	}
-	public void home(){
-		// TODO
-	}
-	
-	@Override
-	public String toString() {
-		// contacts button
-		return "Shop [" + this.name + ", Administrator: " + admin.getFirstName() + "  " + admin.getLastName() + " ]";
-	}
+
 	public void printAllUsers(){
 		for(User user : users){
 			System.out.println(user);
@@ -103,6 +94,15 @@ public class Shop {
 	public void printAllProducts(){
 		for(Product product : availability){
 			System.out.println(product);
+		}
+	}
+	//Niki will try
+	public static void createProducts(){
+		Random r = new Random();
+	//	Product.Brand_Model randomModel = Product.Brand_Model.
+		for (int i = 35; i<=41 ; i++){
+			//WomanShoes womanShoe = new WomanShoes();
+			}
 		}
 	}
 

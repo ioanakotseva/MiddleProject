@@ -1,4 +1,4 @@
-package com.example.ioana.projectshoesshop;
+package com.example.ioana.projectshoesshop.model;
 
 public abstract class Shoes extends Product{
 
@@ -6,8 +6,10 @@ public abstract class Shoes extends Product{
 	private Type type;
 	private int size;
 	
-	public Shoes(String name, String color, String description, double price, int size) {
-		super(name, color, description, price);
+	public Shoes(Type type,Brand_Model brand_model,Color colorType, double price, int size) {
+		super( brand_model, colorType, price);
+		this.size=size;
+		this.type=type;
 	}
 	public void setSize(int size) {
 		this.size = size;

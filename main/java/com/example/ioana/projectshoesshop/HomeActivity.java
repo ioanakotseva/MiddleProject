@@ -34,7 +34,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, WomanShoesActivity.class);
                 HomeActivity.this.startActivity(intent);
-                finish();
+
             }
         });
 
@@ -43,7 +43,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, ManShoesActivity.class);
                 HomeActivity.this.startActivity(intent);
-                finish();
+
             }
         });
 
@@ -70,7 +70,6 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, MyAccountActivity.class);
                 HomeActivity.this.startActivity(intent);
-                finish();
             }
         });
 
@@ -79,7 +78,6 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, SettingsActivity.class);
                 HomeActivity.this.startActivity(intent);
-                finish();
             }
         });
     }
