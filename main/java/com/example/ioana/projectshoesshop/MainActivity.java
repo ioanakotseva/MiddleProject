@@ -8,6 +8,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.ioana.projectshoesshop.model.Shop;
+import com.example.ioana.projectshoesshop.model.User;
+
 import java.lang.String;
 
 public class MainActivity extends AppCompatActivity {
@@ -74,21 +78,21 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    boolean flag = false;
     private boolean validData() {
         return true;
-
-//        if(shop.getUsers().size()>0) {
-//            for (User user : shop.getUsers()) {
-//                String email = user.getEmail();
-//                String pass = user.getPassword();
-//                if (this.username.getText().toString().equals(email) && this.password.getText().toString().equals(pass)) {
-//                    return true;
-//                }
-//            }
-//            return false;
-//        }
-//        Toast.makeText(MainActivity.this, "No users", Toast.LENGTH_SHORT).show();
-//        return false;
+        if(shop.getUsers().size()>0) {
+            for (User user : shop.getUsers()) {
+                String email =  user.getEmail();
+                String pass = user.getPassword();
+                if (this.username.getText().toString().equals(email) && this.password.getText().toString().equals(pass)) {
+                    flag = true;
+                    break;
+                }
+            }
+        }
+        return flag;
+        Toast.makeText(MainActivity.this, "No users", Toast.LENGTH_SHORT).show();
     }
 
 

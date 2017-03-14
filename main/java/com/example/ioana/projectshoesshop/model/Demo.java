@@ -1,11 +1,4 @@
-package com.example.ioana.projectshoesshop;
-
-import com.example.ioana.projectshoesshop.User;
-import com.example.ioana.projectshoesshop.Product;
-import com.example.ioana.projectshoesshop.ManShoes;
-import com.example.ioana.projectshoesshop.WomanShoes.DailyWoman;
-import com.example.ioana.projectshoesshop.WomanShoes.FormalWoman;
-import com.example.ioana.projectshoesshop.WomanShoes.SportWoman;
+package com.example.ioana.projectshoesshop.model;
 
 public class Demo {
 

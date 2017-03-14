@@ -1,7 +1,6 @@
-package com.example.ioana.projectshoesshop;
+package com.example.ioana.projectshoesshop.model;
 
 import java.util.ArrayList;
-import com.example.ioana.projectshoesshop.Product;
 
 public class Cart {
 

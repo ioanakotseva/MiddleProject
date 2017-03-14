@@ -33,7 +33,7 @@ public class SettingsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(SettingsActivity.this, ChangePasswordActivity.class);
                 SettingsActivity.this.startActivity(intent);
-                finish();
+
             }
         });
 
@@ -60,7 +60,6 @@ public class SettingsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(SettingsActivity.this, ContactsActivity.class);
                 SettingsActivity.this.startActivity(intent);
-                finish();
             }
         });
 
@@ -69,7 +68,7 @@ public class SettingsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(SettingsActivity.this, MyAccountActivity.class);
                 SettingsActivity.this.startActivity(intent);
-                finish();
+
             }
         });
 
@@ -78,7 +77,6 @@ public class SettingsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(SettingsActivity.this, SettingsActivity.class);
                 SettingsActivity.this.startActivity(intent);
-                finish();
             }
         });
     }
