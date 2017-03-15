@@ -98,9 +98,9 @@ public abstract class Information {
 			if(c >= '1' && c <= '9'){
 				hasDigit = true;
 			}
-			if(hasSmallLetter && hasCapitalLetter && hasDigit){
-				return true;
-			}
+		}
+		if(hasSmallLetter && hasCapitalLetter && hasDigit){
+			return true;
 		}
 		return false;
 	}
@@ -123,12 +123,7 @@ public abstract class Information {
 		}
 	}
 
-	@Override
-	public String toString() {
-		return "User[" + firstName + " | " + lastName + " | " + age + " | " + age + " | " + phoneNumber + 
-				" | " + email + " | " + password + " | " +
-				shop.getName() + " ]" ;			
-	}
+
 	
 }
 

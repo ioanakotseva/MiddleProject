@@ -34,7 +34,6 @@ public class BagsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(BagsActivity.this, WomanShoesActivity.class);
                 BagsActivity.this.startActivity(intent);
-                finish();
             }
         });
 
@@ -44,7 +43,6 @@ public class BagsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(BagsActivity.this, ManShoesActivity.class);
                 BagsActivity.this.startActivity(intent);
-                finish();
             }
         });
 
@@ -54,7 +52,6 @@ public class BagsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(BagsActivity.this, BagsActivity.class);
                 BagsActivity.this.startActivity(intent);
-                finish();
             }
         });
 
@@ -72,7 +69,6 @@ public class BagsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(BagsActivity.this, MyAccountActivity.class);
                 BagsActivity.this.startActivity(intent);
-                finish();
             }
         });
 
@@ -81,7 +77,6 @@ public class BagsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(BagsActivity.this, SettingsActivity.class);
                 BagsActivity.this.startActivity(intent);
-                finish();
             }
         });
     }

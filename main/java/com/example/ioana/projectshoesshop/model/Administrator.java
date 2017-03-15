@@ -3,6 +3,7 @@ package com.example.ioana.projectshoesshop.model;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 public class Administrator extends Information {
 
@@ -25,7 +26,10 @@ public class Administrator extends Information {
 
 	//Ioana will try
 	public void addNewProduct(Product b){
-			// shop.addProd(b);
+		//create 3 products of that size or type(for bags)
+		for (int i =0; i<3 ;i++) {
+			shop.addProd(b);
+		}
 	}
 	
 

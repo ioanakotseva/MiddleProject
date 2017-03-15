@@ -1,6 +1,7 @@
 package com.example.ioana.projectshoesshop.model;
 
 import android.util.Log;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -67,16 +68,10 @@ public class Shop {
 	}
 	//Ioana will try
 	public void sellProduct(Product b){
-		int i = 0;
 		for (Product buy : availability) {
 			if(b.equals(buy)){
-				if(buy.getAvailability()>0){
-					i = buy.getAvailability()-1;
-					buy.setAvailability(i);
-				}
-				else{
-					Log.e("no_availability", "No availability!");
-				}
+				this.availability.remove(b);
+				break;
 			}
 		}
 	}
@@ -106,6 +101,5 @@ public class Shop {
 		}
 	}
 
-	
-}
+
 
