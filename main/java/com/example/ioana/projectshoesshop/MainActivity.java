@@ -35,15 +35,15 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener listen = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(validData()) {
+               // if(validData()) {
                     Toast.makeText(MainActivity.this, "User data is valid", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                     MainActivity.this.startActivity(intent);
                     finish();
-                }
-                else{
-                    Toast.makeText(MainActivity.this, "User data is not valid", Toast.LENGTH_SHORT).show();
-                }
+                //}
+                //else{
+                //    Toast.makeText(MainActivity.this, "User data is not valid", Toast.LENGTH_SHORT).show();
+                //}
 
             }
         };

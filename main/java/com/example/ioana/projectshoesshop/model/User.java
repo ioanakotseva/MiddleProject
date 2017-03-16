@@ -12,10 +12,7 @@ public class User extends Information{
 		this.shop.addUser(this);
 		// this.admin = Administrator.getInstance("Ioana", "Kotseva", 20, "0895550175", "ioana.kotseva@gmail.com", "Yoana.kotseva96");
 	}
-	
-	static void signUp(String firstName, String lastName, int age, String phoneNumber, String email, String password){
-		
-	}
+
 	public void deleteAccount(){
 		this.shop.getUsers().remove(this);
 	}

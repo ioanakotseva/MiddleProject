@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     <Button
-        android:id="@+id/womanShoesButton"
+        android:id="@+id/womanShoesButton_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
@@ -19,7 +19,7 @@
         android:text="Woman Shoes" />
 
     <Button
-        android:id="@+id/manShoesButton"
+        android:id="@+id/manShoesButton_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
@@ -29,7 +29,7 @@
         android:text="Man Shoes" />
 
     <Button
-        android:id="@+id/bagsButton"
+        android:id="@+id/bagsButton_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
@@ -56,7 +56,7 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/contacts"
+            android:id="@+id/contacts_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
@@ -66,7 +66,7 @@
             android:text="Contacts" />
 
         <Button
-            android:id="@+id/myAccount"
+            android:id="@+id/myAccount_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
@@ -75,7 +75,7 @@
             android:layout_weight="1"
             android:text="My Account" />
         <Button
-            android:id="@+id/settings"
+            android:id="@+id/settings_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"

@@ -33,24 +33,24 @@ public class RegistrationActivity extends AppCompatActivity {
         lastName = (EditText) this.findViewById(R.id.lastName);
         age = (EditText) this.findViewById(R.id.age);
         phoneNumber = (EditText) this.findViewById(R.id.phoneNumber);
+        singIn = (Button) this.findViewById(R.id.singInButton);
 
         String userEmail = email.getText().toString();
         String userPass = password.getText().toString();
         String userPass2 = password2.getText().toString();
         String userFirstName = firstName.getText().toString();
         String userLastName = lastName.getText().toString();
-        //String userAge = ((int) age.getText());
+        int userAge = Integer.parseInt(age.getText().toString());
         String userPhone = phoneNumber.getText().toString();
         if (userPass.equals(userPass2)) {
             User user = new User(userFirstName, userLastName, userAge, userPhone, userEmail, userPass);
         }
-        singIn = (Button) this.findViewById(R.id.singInButton);
+
         singIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                    Intent intent = new Intent(RegistrationActivity.this, HomeActivity.class);
-                    RegistrationActivity.this.startActivity(intent);
+                Intent intent = new Intent(RegistrationActivity.this, HomeActivity.class);
+                RegistrationActivity.this.startActivity(intent);
             }
         });
 

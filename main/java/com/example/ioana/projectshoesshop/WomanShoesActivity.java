@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class WomanShoesActivity extends AppCompatActivity {
 
-    private Button womanShoesButton;
+    private Button homeButton;
     private Button manShoesButton;
     private Button bagsButton;
     private Button contactsButton;
@@ -21,19 +21,18 @@ public class WomanShoesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bags);
 
-        womanShoesButton = (Button) this.findViewById(R.id.womanShoesButton);
-        manShoesButton = (Button) this.findViewById(R.id.manShoesButton);
-        bagsButton = (Button) this.findViewById(R.id.bagsButton);
-        contactsButton = (Button) this.findViewById(R.id.contacts);
-        myAccountButton = (Button) this.findViewById(R.id.myAccount);
-        settingsButton = (Button) this.findViewById(R.id.settings);
+        homeButton = (Button) this.findViewById(R.id.home_woman);
+        manShoesButton = (Button) this.findViewById(R.id.manShoesButton_woman);
+        bagsButton = (Button) this.findViewById(R.id.bagsButton_woman);
+        contactsButton = (Button) this.findViewById(R.id.contacts_woman);
+        myAccountButton = (Button) this.findViewById(R.id.myAccount_woman);
+        settingsButton = (Button) this.findViewById(R.id.settings_woman);
 
-        womanShoesButton.setOnClickListener(new View.OnClickListener() {
+        homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(WomanShoesActivity.this, WomanShoesActivity.class);
+                Intent intent = new Intent(WomanShoesActivity.this, HomeActivity.class);
                 WomanShoesActivity.this.startActivity(intent);
-                finish();
             }
         });
 
@@ -43,7 +42,6 @@ public class WomanShoesActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(WomanShoesActivity.this, ManShoesActivity.class);
                 WomanShoesActivity.this.startActivity(intent);
-                finish();
             }
         });
 
@@ -53,7 +51,6 @@ public class WomanShoesActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(WomanShoesActivity.this, BagsActivity.class);
                 WomanShoesActivity.this.startActivity(intent);
-                finish();
             }
         });
 
@@ -62,7 +59,6 @@ public class WomanShoesActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(WomanShoesActivity.this, ContactsActivity.class);
                 WomanShoesActivity.this.startActivity(intent);
-                finish();
             }
         });
 
@@ -71,7 +67,6 @@ public class WomanShoesActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(WomanShoesActivity.this, MyAccountActivity.class);
                 WomanShoesActivity.this.startActivity(intent);
-                finish();
             }
         });
 
@@ -80,7 +75,6 @@ public class WomanShoesActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(WomanShoesActivity.this, SettingsActivity.class);
                 WomanShoesActivity.this.startActivity(intent);
-                finish();
             }
         });
     }

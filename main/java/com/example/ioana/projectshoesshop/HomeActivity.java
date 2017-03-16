@@ -22,12 +22,12 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        womanShoesButton = (Button) this.findViewById(R.id.womanShoesButton);
-        manShoesButton = (Button) this.findViewById(R.id.manShoesButton);
-        bagsButton = (Button) this.findViewById(R.id.bagsButton);
-        contactsButton = (Button) this.findViewById(R.id.contacts);
-        myAccountButton = (Button) this.findViewById(R.id.myAccount);
-        settingsButton = (Button) this.findViewById(R.id.settings);
+        womanShoesButton = (Button) this.findViewById(R.id.womanShoesButton_home);
+        manShoesButton = (Button) this.findViewById(R.id.manShoesButton_home);
+        bagsButton = (Button) this.findViewById(R.id.bagsButton_home);
+        contactsButton = (Button) this.findViewById(R.id.contacts_home);
+        myAccountButton = (Button) this.findViewById(R.id.myAccount_home);
+        settingsButton = (Button) this.findViewById(R.id.settings_home);
 
         womanShoesButton.setOnClickListener(new View.OnClickListener() {
             @Override
