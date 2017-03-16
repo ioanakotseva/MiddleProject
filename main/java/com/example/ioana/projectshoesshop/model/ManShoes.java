@@ -1,19 +1,16 @@
 package com.example.ioana.projectshoesshop.model;
 
 
-public  class ManShoes extends Shoes {
+public class ManShoes extends Shoes {
 
-	public ManShoes( Brand_Model brand_model, Color colorType, double price, int size) {
-		super(Type.MAN, brand_model, colorType, price, size);
-		this.setType(Type.MAN);
-		if(size>42 && size<=5){
-			super.setSize(size);
-		}
-		else{
-			super.setSize(40);
+	public ManShoes(Brand brand, Color colorType, double price, int count, int size) {
+		super(brand, colorType, price, count, size);
+		setType(Type.MEN);
+		if(size >= 41 && size <= 46){
+			setSize(size);
 		}
 	}
-	
+
 	/*public static class SportMan extends ManShoes {
 		private boolean isWaterProof;
 		public SportMan(String name, String color, String description, double price, int size, boolean isWaterProof) {

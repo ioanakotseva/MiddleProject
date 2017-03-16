@@ -13,87 +13,72 @@ import com.example.ioana.projectshoesshop.model.Shop;
 import com.example.ioana.projectshoesshop.model.User;
 
 import java.lang.String;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button logInButton;
     private TextView singUpButton;
-    private EditText username ;
+    private EditText email ;
     private EditText password;
-    Shop shop = Shop.getInstace("Shoes Shop");
+    public static ArrayList<User> registeredUsers = new ArrayList<>();
+    public Shop shop = Shop.getInstace("Shoes Shop");
+
+    static {
+        User ivan = new User("ivanivanov@abv.bg", "Ivan123");
+        registeredUsers.add(ivan);
+        User georgi = new User("georgi_georgiev@gmail.com", "Gogo123");
+        registeredUsers.add(georgi);
+        User dimitur = new User("dimitur_dimitrov@gmail.com", "Dimo123");
+        registeredUsers.add(dimitur);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        username = (EditText) this.findViewById(R.id.username_textView);
-        password = (EditText) this.findViewById(R.id.password_textView);
+        email = (EditText) this.findViewById(R.id.email_editText);
+        password = (EditText) this.findViewById(R.id.password_editText);
         logInButton = (Button) this.findViewById(R.id.logIn_Button);
         singUpButton = (TextView) this.findViewById(R.id.signUp_Button);
 
-        View.OnClickListener listen = new View.OnClickListener() {
+        logInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // if(validData()) {
-                    Toast.makeText(MainActivity.this, "User data is valid", Toast.LENGTH_SHORT).show();
+                if(validData()){
                     Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                     MainActivity.this.startActivity(intent);
                     finish();
-                //}
-                //else{
-                //    Toast.makeText(MainActivity.this, "User data is not valid", Toast.LENGTH_SHORT).show();
-                //}
-
+                }
+                else{
+                    Toast.makeText(MainActivity.this, "User data is not valid", Toast.LENGTH_SHORT).show();
+                }
             }
-        };
-        logInButton.setOnClickListener(listen);
+        });
 
         singUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, RegistrationActivity.class);
                 MainActivity.this.startActivity(intent);
-                finish();
             }
         });
 
-        username.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus)
-                    username.setHint("");
-                else
-                    username.setHint("Username");
-            }
-        });
-
-        password.setOnFocusChangeListener(new View.OnFocusChangeListener(){
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if(hasFocus)
-                    password.setHint("");
-                else
-                    password.setHint("Password");
-            }
-        });
     }
-
 
     private boolean validData() {
         boolean flag = false;
-        if(shop.getUsers().size()>0) {
-            for (User user : shop.getUsers()) {
-                String email =  user.getEmail();
-                String pass = user.getPassword();
-                if (this.username.getText().toString().equals(email) && this.password.getText().toString().equals(pass)) {
+        if(registeredUsers.size() > 0) {
+            for (User user : registeredUsers) {
+                String currentEmail = user.getEmail();
+                String currentPassword = user.getPassword();
+                if (this.email.getText().toString().equals(currentEmail) && this.password.getText().toString().equals(currentPassword)) {
                     flag = true;
-                    return flag;
+                    break;
                 }
             }
         }
-        Toast.makeText(MainActivity.this, "No users. Create Account First", Toast.LENGTH_SHORT).show();
         return flag;
     }
-
-
 }

@@ -15,7 +15,7 @@ public class Cart {
 	}
 	
 	public void addIn(Product b){
-		if(b != null){
+		if(b != null && b.getAvailability()){
 			this.products.add(b);
 			this.price += b.getPrice();
 			this.numberOfProd++;
@@ -31,8 +31,5 @@ public class Cart {
 	public void clearAll(){
 		this.products.clear();
 	}
-
-	public ArrayList<Product> getProducts() {
-		return products;
-	}
+	
 }

@@ -2,113 +2,72 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/VerticalLinearLayoutOrientation"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="@dimen/fab_margin">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Registration..."
+        android:text="@string/registration_page"
         android:fontFamily="cursive"
+        android:gravity="center"
+        android:textStyle="bold"
         android:textSize="45sp"
+        android:paddingBottom="@dimen/fab_margin"
        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="@dimen/fab_margin"
         style="@style/VerticalLinearLayoutOrientation">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="e-mail: "
-            android:textSize="20sp"/>
+
         <EditText
-            android:id="@+id/addingEmail"
+            android:id="@+id/email_registration"
+            android:inputType="textEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="password: "
+            android:hint="@string/email"
+            android:textSize="15sp"/>
 
-            android:textSize="20sp"/>
         <EditText
-            android:id="@+id/password"
+            android:id="@id/password_editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="password again: "
-            android:textSize="20sp"/>
+            android:hint="@string/password"
+            android:textSize="15sp"/>
+
         <EditText
-            android:id="@+id/password2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/confirm_password_editText"
             android:inputType="textPassword"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Name: "
-            android:textSize="20sp"/>
-        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="first:"/>
-            <EditText
-                android:id="@+id/firsName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:hint="@string/confirm_new_passwrd"
+            android:textSize="15sp"
             />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="last:"/>
-
-           <EditText
-               android:id="@+id/lastName"
-               android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
-
-        </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="age: "
-            android:textSize="20sp"/>
-        <EditText
-            android:id="@+id/age"
-            android:inputType="number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="phone number: "
-            android:textSize="20sp"/>
-        <EditText
-            android:id="@+id/phoneNumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
-
     </LinearLayout>
-    <Button
-        android:id="@+id/singInButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Create account"
-        android:fontFamily="cursive"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/singInButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/create_account_button_registration"
+            android:background="@drawable/ovalbuttonshape"/>
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cancel"
+            android:background="@drawable/ovalbuttonshape"/>
+    </LinearLayout>
 
 </LinearLayout>

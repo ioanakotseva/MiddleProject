@@ -5,14 +5,20 @@ public class User extends Information{
 	private Cart cart;
 	private static Administrator admin = Administrator.getInstance();
 	private Shop shop;
-	
-	public User(String firstName, String lastName, int age, String phoneNumber, String email, String password){
-		super(firstName, lastName, age, phoneNumber, email, password);
+
+	public User(String email, String password){
+		super(email, password);
+	}
+	public User(String name, int age, String phoneNumber, String email, String password){
+		super(name, age, phoneNumber, email, password);
 		this.cart = new Cart();
-		this.shop.addUser(this);
+		// this.shop.addUser(this);
 		// this.admin = Administrator.getInstance("Ioana", "Kotseva", 20, "0895550175", "ioana.kotseva@gmail.com", "Yoana.kotseva96");
 	}
-
+	
+	static void signUp(String firstName, String lastName, int age, String phoneNumber, String email, String password){
+		
+	}
 	public void deleteAccount(){
 		this.shop.getUsers().remove(this);
 	}
@@ -27,7 +33,10 @@ public class User extends Information{
 		System.out.println("Invalid e-mail or password!");
 		return false;
 	}
-
+	public void logOut(){
+		System.out.println("Logging out ..");
+		// TODO
+	}
 	
 	public void changePassword(String oldPassword, String newPassword, String newPasswordAgain){
 		if(!this.getPassword().equals(oldPassword)){
@@ -43,7 +52,8 @@ public class User extends Information{
 	
 	
 	public void addInCart(Product b){
-		this.cart.addIn(b);
+		// TODO
+		// this.cart.addIn(b);
 	}
 	public void removeFromCart(Product b){
 		this.cart.remove(b);
@@ -53,10 +63,10 @@ public class User extends Information{
 	}
 	
 	public void makeOrder(){
-		for (Product product : cart.getProducts()) {
-			shop.sellProduct(product);
-		}
-		this.cart.clearAll();
+		// TODO
+		// not working
+		// this.admin.addInOrders(this, cart.products);
+		// this.cart.clearAll();
 	}
 	
 	@Override

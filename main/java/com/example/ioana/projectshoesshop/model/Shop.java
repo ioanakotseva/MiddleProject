@@ -1,22 +1,22 @@
 package com.example.ioana.projectshoesshop.model;
 
-import android.util.Log;
-import android.widget.Toast;
-
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Random;
+import java.util.TreeSet;
 
 public class Shop {
 	
 	private String name;
 	private Administrator admin;
-	private HashSet<User> users;
-	private ArrayList<Product> availability; // products
+	private TreeSet<User> users;
+	private ArrayList<Product> products;
 	
 	//The Singleton pattern
 	private static Shop instance;
-	//together
 	private Shop(String name){
 		if(name!=null && !name.isEmpty()){
 			this.name = name;
@@ -24,12 +24,10 @@ public class Shop {
 		else{
 			this.name = "Shoes Shop";
 		}
-		this.users = new HashSet<>();
-		this.availability = new ArrayList<>();
-
-
-
-
+		this.users = new TreeSet<>();
+		this.products = new ArrayList<>();
+		// this.createProducts();
+		// this.createUsers();
 	}
 	public static Shop getInstace(String name){
 		if(instance == null){
@@ -43,9 +41,6 @@ public class Shop {
 	}
 	public HashSet<User> getUsers() {
 		return (HashSet<User>) java.util.Collections.unmodifiableSet(users);
-	}
-	public Administrator getAdmin() {
-		return admin;
 	}
 	
 	public boolean containsEmail(String email){
@@ -66,18 +61,10 @@ public class Shop {
 			this.users.add(user);
 		}
 	}
-	//Ioana will try
-	public void sellProduct(Product b){
-		for (Product buy : availability) {
-			if(b.equals(buy)){
-				this.availability.remove(b);
-				break;
-			}
-		}
-	}
+
 	public void addProd(Product buy){
 		if(buy != null){
-			this.availability.add(buy);
+			this.products.add(buy);
 		}
 	}
 
@@ -87,19 +74,47 @@ public class Shop {
 		}
 	}
 	public void printAllProducts(){
-		for(Product product : availability){
+		for(Product product : products){
 			System.out.println(product);
 		}
 	}
-	//Niki will try
-	public static void createProducts(){
-		Random r = new Random();
-	//	Product.Brand_Model randomModel = Product.Brand_Model.
-		for (int i = 35; i<=41 ; i++){
-			//WomanShoes womanShoe = new WomanShoes();
+
+	// creating 10 random products and 5 random users
+	private void createProducts(){
+		Random rand = new Random();
+		List<Product.Type> types = Collections.unmodifiableList(Arrays.asList(Product.Type.values()));
+		List<Product.Brand> brands = Collections.unmodifiableList(Arrays.asList(Product.Brand.values()));
+		List<Product.Color> colors = Collections.unmodifiableList(Arrays.asList(Product.Color.values()));
+		for(int i = 0; i < 10; i++){
+			int randTypeIdx = rand.nextInt(types.size());
+			Product.Brand randBrand = brands.get(rand.nextInt(brands.size()));
+			Product.Color randColor = colors.get(rand.nextInt(colors.size()));
+			double randPrice = (double) rand.nextInt(401) + 50; // random price between 50 and 400
+			int randCount = rand.nextInt(10) + 1; // random count between 1 and 10
+			int randWSize = rand.nextInt(7) + 35; // random women shoe size
+			int randMSize = rand.nextInt(6) + 41; // random men shoe size
+
+			switch (randTypeIdx){
+				case 0: this.addProd(new WomanShoes(randBrand, randColor, randPrice, randCount ,randWSize));
+					break;
+				case 1: this.addProd(new ManShoes(randBrand, randColor, randPrice, randCount, randMSize));
+					break;
+				case 2: this.addProd(new Bags(randBrand, randColor, randPrice, randCount));
+					break;
+				default:
+					break;
 			}
 		}
 	}
-
-
-
+	private void createUsers(){
+		Random rand = new Random();
+		List<String> names = Collections.unmodifiableList(Arrays.asList("Ivan", "Georgi", "Dani", "Anna", "Sonya"));
+		for(int i = 0; i < 5; i++) {
+			int randNameIdx = rand.nextInt(names.size());
+			String randName = names.get(randNameIdx);
+			String randEmail = names.get(randNameIdx) + "@gmail.com";
+			String randPassword = names.get(randNameIdx) + "123pass";
+			users.add(new User(randName, randPassword));
+		}
+	}
+}

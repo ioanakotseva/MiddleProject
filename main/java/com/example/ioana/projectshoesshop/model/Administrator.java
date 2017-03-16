@@ -3,20 +3,17 @@ package com.example.ioana.projectshoesshop.model;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 
 public class Administrator extends Information {
 
-
-	
-	private Administrator(String firstName, String lastName, int age, String phoneNumber, String email, String password) {
-		super(firstName, lastName, age, phoneNumber, email, password);
+	private Administrator(String name, int age, String phoneNumber, String email, String password) {
+		super(name, age, phoneNumber, email, password);
 	}
 	
 	private static Administrator adminInstance;
-	public static Administrator getInstance(String firstName, String lastName, int age, String phoneNumber, String email, String password){
+	public static Administrator getInstance(String name, int age, String phoneNumber, String email, String password){
 		if(adminInstance == null){
-			adminInstance = new Administrator(firstName, lastName, age , phoneNumber, email, password);
+			adminInstance = new Administrator(name, age , phoneNumber, email, password);
 		}
 		return adminInstance;		
 	}
@@ -26,10 +23,7 @@ public class Administrator extends Information {
 
 	//Ioana will try
 	public void addNewProduct(Product b){
-		//create 3 products of that size or type(for bags)
-		for (int i =0; i<3 ;i++) {
-			shop.addProd(b);
-		}
+			// shop.addProd(b);
 	}
 	
 
