@@ -35,15 +35,15 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener listen = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(validData()) {
+               // if(validData()) {
                     Toast.makeText(MainActivity.this, "User data is valid", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                     MainActivity.this.startActivity(intent);
                     finish();
-                }
-                else{
-                    Toast.makeText(MainActivity.this, "User data is not valid", Toast.LENGTH_SHORT).show();
-                }
+                //}
+                //else{
+                //    Toast.makeText(MainActivity.this, "User data is not valid", Toast.LENGTH_SHORT).show();
+                //}
 
             }
         };
@@ -78,21 +78,21 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    boolean flag = false;
+
     private boolean validData() {
-        return true;
+        boolean flag = false;
         if(shop.getUsers().size()>0) {
             for (User user : shop.getUsers()) {
                 String email =  user.getEmail();
                 String pass = user.getPassword();
                 if (this.username.getText().toString().equals(email) && this.password.getText().toString().equals(pass)) {
                     flag = true;
-                    break;
+                    return flag;
                 }
             }
         }
+        Toast.makeText(MainActivity.this, "No users. Create Account First", Toast.LENGTH_SHORT).show();
         return flag;
-        Toast.makeText(MainActivity.this, "No users", Toast.LENGTH_SHORT).show();
     }
 
 

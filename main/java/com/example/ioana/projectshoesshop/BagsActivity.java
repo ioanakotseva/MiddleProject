@@ -11,7 +11,7 @@ public class BagsActivity extends AppCompatActivity {
 
     private Button womanShoesButton;
     private Button manShoesButton;
-    private Button bagsButton;
+    private Button homeButton;
     private Button contactsButton;
     private Button settingsButton;
     private Button myAccountButton;
@@ -22,19 +22,18 @@ public class BagsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bags);
 
-        womanShoesButton = (Button) this.findViewById(R.id.womanShoesButton);
-        manShoesButton = (Button) this.findViewById(R.id.manShoesButton);
-        bagsButton = (Button) this.findViewById(R.id.bagsButton);
-        contactsButton = (Button) this.findViewById(R.id.contacts);
-        myAccountButton = (Button) this.findViewById(R.id.myAccount);
-        settingsButton = (Button) this.findViewById(R.id.settings);
+        womanShoesButton = (Button) this.findViewById(R.id.womanShoesButton_bags);
+        manShoesButton = (Button) this.findViewById(R.id.manShoesButton_bags);
+        homeButton = (Button) this.findViewById(R.id.home_bags);
+        contactsButton = (Button) this.findViewById(R.id.contacts_bags);
+        myAccountButton = (Button) this.findViewById(R.id.myAccount_bags);
+        settingsButton = (Button) this.findViewById(R.id.settings_bags);
 
         womanShoesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(BagsActivity.this, WomanShoesActivity.class);
                 BagsActivity.this.startActivity(intent);
-                finish();
             }
         });
 
@@ -44,17 +43,15 @@ public class BagsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(BagsActivity.this, ManShoesActivity.class);
                 BagsActivity.this.startActivity(intent);
-                finish();
             }
         });
 
 
-        bagsButton.setOnClickListener(new View.OnClickListener() {
+        homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(BagsActivity.this, BagsActivity.class);
                 BagsActivity.this.startActivity(intent);
-                finish();
             }
         });
 
@@ -72,7 +69,6 @@ public class BagsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(BagsActivity.this, MyAccountActivity.class);
                 BagsActivity.this.startActivity(intent);
-                finish();
             }
         });
 
@@ -81,7 +77,6 @@ public class BagsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(BagsActivity.this, SettingsActivity.class);
                 BagsActivity.this.startActivity(intent);
-                finish();
             }
         });
     }

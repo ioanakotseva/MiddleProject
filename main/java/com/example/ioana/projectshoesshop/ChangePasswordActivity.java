@@ -14,6 +14,9 @@ public class ChangePasswordActivity extends AppCompatActivity {
     private String oldPassword;
     private String newPassword;
     private String confirmPassword;
+    private Button contactsButton;
+    private Button myAccountButton;
+    private Button settingsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,10 @@ public class ChangePasswordActivity extends AppCompatActivity {
         oldPassword = this.findViewById(R.id.old_password).toString();
         newPassword = this.findViewById(R.id.new_password).toString();
         confirmPassword = this.findViewById(R.id.confirmed_password).toString();
+        contactsButton = (Button) this.findViewById(R.id.contacts_changePass);
+        myAccountButton = (Button) this.findViewById(R.id.myAccount_changePass);
+        settingsButton = (Button) this.findViewById(R.id.settings_changePass);
+
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
@@ -44,6 +51,30 @@ public class ChangePasswordActivity extends AppCompatActivity {
             }
         };
         changePassword.setOnClickListener(listener);
+        contactsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChangePasswordActivity.this, ContactsActivity.class);
+                ChangePasswordActivity.this.startActivity(intent);
+            }
+        });
+
+        myAccountButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChangePasswordActivity.this, MyAccountActivity.class);
+                ChangePasswordActivity.this.startActivity(intent);
+            }
+        });
+
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChangePasswordActivity.this, SettingsActivity.class);
+                ChangePasswordActivity.this.startActivity(intent);
+            }
+        });
+
     }
 
 
@@ -67,9 +98,9 @@ public class ChangePasswordActivity extends AppCompatActivity {
             if(c >= '1' && c <= '9'){
                 hasDigit = true;
             }
-            if(hasSmallLetter && hasCapitalLetter && hasDigit){
-                return true;
-            }
+        }
+        if(hasSmallLetter && hasCapitalLetter && hasDigit){
+            return true;
         }
         return false;
     }

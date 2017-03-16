@@ -10,7 +10,7 @@ import com.example.ioana.projectshoesshop.R;
 
 public class ContactsActivity extends AppCompatActivity {
 
-    private Button contactsButton;
+    private Button home;
     private Button myAccountButton;
     private Button settingsButton;
 
@@ -19,16 +19,15 @@ public class ContactsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacts);
 
-        contactsButton = (Button) this.findViewById(R.id.contacts);
-        myAccountButton = (Button) this.findViewById(R.id.myAccount);
-        settingsButton = (Button) this.findViewById(R.id.settings);
+        home = (Button) this.findViewById(R.id.home_contacts);
+        myAccountButton = (Button) this.findViewById(R.id.myAccount_Contacts);
+        settingsButton = (Button) this.findViewById(R.id.settings_contacts);
 
-        contactsButton.setOnClickListener(new View.OnClickListener() {
+        home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ContactsActivity.this, ContactsActivity.class);
+                Intent intent = new Intent(ContactsActivity.this, HomeActivity.class);
                 ContactsActivity.this.startActivity(intent);
-                finish();
             }
         });
 
@@ -37,7 +36,6 @@ public class ContactsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(ContactsActivity.this, MyAccountActivity.class);
                 ContactsActivity.this.startActivity(intent);
-                finish();
             }
         });
 
@@ -46,7 +44,6 @@ public class ContactsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(ContactsActivity.this, SettingsActivity.class);
                 ContactsActivity.this.startActivity(intent);
-                finish();
             }
         });
     }

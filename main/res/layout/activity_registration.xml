@@ -22,6 +22,7 @@
             android:text="e-mail: "
             android:textSize="20sp"/>
         <EditText
+            android:id="@+id/addingEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
@@ -32,6 +33,7 @@
 
             android:textSize="20sp"/>
         <EditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -42,6 +44,7 @@
             android:text="password again: "
             android:textSize="20sp"/>
         <EditText
+            android:id="@+id/password2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -60,6 +63,7 @@
                 android:layout_height="wrap_content"
                 android:text="first:"/>
             <EditText
+                android:id="@+id/firsName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
@@ -69,7 +73,8 @@
                 android:text="last:"/>
 
            <EditText
-            android:layout_width="wrap_content"
+               android:id="@+id/lastName"
+               android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
 
@@ -80,6 +85,8 @@
             android:text="age: "
             android:textSize="20sp"/>
         <EditText
+            android:id="@+id/age"
+            android:inputType="number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
@@ -89,6 +96,7 @@
             android:text="phone number: "
             android:textSize="20sp"/>
         <EditText
+            android:id="@+id/phoneNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
