@@ -1,21 +1,24 @@
 package com.example.ioana.projectshoesshop.model;
 
+import java.lang.String;
 
 public abstract class Information {
 
-	private String firstName;
-	private String lastName;
+	private String name;
 	private int age;
 	private String phoneNumber;
 	private String email;
 	private String password;
 	protected static Shop shop;
-	
-	public Information(String firstName, String lastName, int age, String phoneNumber, String email, String password) {
-		this.shop = Shop.getInstace("Shoes Shop");
-		if(firstName != null && !firstName.isEmpty() && lastName != null && !lastName.isEmpty()){
-			this.firstName = firstName;
-			this.lastName = lastName;
+
+	public Information(String email, String password){
+		setEmail(email);
+		setPassword(password);
+	}
+	public Information(String name, int age, String phoneNumber, String email, String password) {
+		this(email, password);
+		if(name != null && !name.isEmpty()){
+			this.name = name;
 		}
 		if(age >= 18){
 			this.age = age;
@@ -23,13 +26,9 @@ public abstract class Information {
 		if(isValidPhone(phoneNumber)){
 			this.phoneNumber = phoneNumber;
 		}
-		if(isValidEmail(email)){
-			this.email = email;
-		}
-		setPassword(password);
 	}
 	
-	static boolean isValidPhone(String number){
+	public static boolean isValidPhone(String number){
 		// works only with bulgarian  phone numbers
 		if(number == null || number.isEmpty()){
 			return false;
@@ -60,7 +59,7 @@ public abstract class Information {
 		}
 		return false;
 	}
-	static boolean isValidEmail(String mail){
+	public static boolean isValidEmail(String mail){
 		if(mail == null || mail.isEmpty()){
 			return false;
 		}
@@ -78,7 +77,7 @@ public abstract class Information {
 		}
 		return false;
 	}
-	static boolean isStrongPassword(String password){
+	public static boolean isStrongPassword(String password){
 		// A strong password has at least 5 symbols( small letters, capital letters and digits).
 		boolean hasSmallLetter = false;
 		boolean hasCapitalLetter = false;
@@ -98,18 +97,15 @@ public abstract class Information {
 			if(c >= '1' && c <= '9'){
 				hasDigit = true;
 			}
-		}
-		if(hasSmallLetter && hasCapitalLetter && hasDigit){
-			return true;
+			if(hasSmallLetter && hasCapitalLetter && hasDigit){
+				return true;
+			}
 		}
 		return false;
 	}
 
-	public String getFirstName() {
-		return this.firstName;
-	}
-	public String getLastName() {
-		return lastName;
+	public String getName() {
+		return this.name;
 	}
 	public String getEmail() {
 		return this.email;
@@ -122,9 +118,11 @@ public abstract class Information {
 			this.password = password;
 		}
 	}
-
-
-	
+	public void setEmail(String email) {
+		if(isValidEmail(email)){
+			this.email = email;
+		}
+	}
 }
 
 

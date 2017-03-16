@@ -13,7 +13,7 @@ import android.widget.Button;
 public class MyAccountActivity extends AppCompatActivity{
 
     private Button contactsButton;
-    private Button homeButton;
+    private Button myAccountButton;
     private Button settingsButton;
 
     @Override
@@ -21,9 +21,9 @@ public class MyAccountActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myaccount);
 
-        contactsButton = (Button) this.findViewById(R.id.contacts_account);
-        homeButton = (Button) this.findViewById(R.id.home_account);
-        settingsButton = (Button) this.findViewById(R.id.settings_account);
+        contactsButton = (Button) this.findViewById(R.id.contacts);
+        myAccountButton = (Button) this.findViewById(R.id.myAccount);
+        settingsButton = (Button) this.findViewById(R.id.settings);
 
         contactsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,10 +34,10 @@ public class MyAccountActivity extends AppCompatActivity{
             }
         });
 
-        homeButton.setOnClickListener(new View.OnClickListener() {
+        myAccountButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MyAccountActivity.this, HomeActivity.class);
+                Intent intent = new Intent(MyAccountActivity.this, MyAccountActivity.class);
                 MyAccountActivity.this.startActivity(intent);
                 finish();
             }

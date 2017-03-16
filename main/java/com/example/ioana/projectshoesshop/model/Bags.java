@@ -2,8 +2,9 @@ package com.example.ioana.projectshoesshop.model;
 
 public class Bags extends Product {
 
-
-	public Bags(Brand_Model brand_model, Color colorType, double price) {
-		super(brand_model, colorType, price);
+	public Bags(Brand brand, Color colorType, double price, int count) {
+		super(brand, colorType, price, count);
+		setType(Type.BAGS);
 	}
+
 }

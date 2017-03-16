@@ -6,7 +6,7 @@ public class Demo {
 
 		Shop shop = Shop.getInstace("Shoes Shop");
 		
-		Administrator admin = Administrator.getInstance("Ioana", "Kotseva", 20, "0895550175", "ioana.kotseva@gmail.com", "Yoana.kotseva96");
+		Administrator admin = Administrator.getInstance("Ioana", 20, "0895550175", "ioana.kotseva@gmail.com", "Yoana.kotseva96");
 		shop.addAdministrator(admin);
 		System.out.println(shop.toString());
 		
@@ -27,8 +27,8 @@ public class Demo {
 		// admin.addNewProduct(cubinka);
 		// admin.addNewProduct(chanta);
 		
-		User diana = new User("Diana", "Kotseva", 26, "0895550173", "di.kotseva@gmail.com","Diana.kotseva90");
-		User vladimir = new User("Vladimir", "Iv", 30, "0894216215", "ninjata_stunt@abv.bg","VladkataStunt.636");
+		User diana = new User("Diana", 26, "0895550173", "di.kotseva@gmail.com","Diana.kotseva90");
+		User vladimir = new User("Vladimir", 30, "0894216215", "ninjata_stunt@abv.bg","VladkataStunt.636");
 		
 		
 		

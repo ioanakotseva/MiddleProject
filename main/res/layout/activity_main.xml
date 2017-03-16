@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     style="@style/VerticalLinearLayoutOrientation"
-    android:orientation="vertical"
     android:gravity="center"
     android:background="@drawable/background_blurred"
     tools:context="com.example.ioana.projectshoesshop.MainActivity"
@@ -13,61 +12,40 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Shoes Shop"
+        android:text="@string/shop_name"
         android:textStyle="bold"
         android:textSize="45sp"
         android:fontFamily="cursive"
         android:gravity="center"/>
 
-    <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="username"-->
-        <!--android:fontFamily="serif"-->
-        <!--android:textSize="25sp"/>-->
-
     <EditText
-        android:id="@+id/username_textView"
+        android:id="@+id/email_editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textCursorDrawable="@color/black"
-        android:textColorLink="@color/black" />
-
-    <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="password"-->
-        <!--android:fontFamily="serif"-->
-        <!--android:textSize="25sp"/>-->
+        android:inputType="textEmailAddress"
+        android:hint="@string/email"
+        android:textSize="15sp" />
 
     <EditText
-        android:id="@+id/password_textView"
+        android:id="@+id/password_editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:textCursorDrawable="@color/black"
-        android:textColorLink="@color/black"/>
+        android:hint="@string/password"
+        android:textSize="15sp"/>
 
     <Button
         android:id="@+id/logIn_Button"
-        android:text="Log In"
+        android:text="@string/log_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="tryLogIn"
-        android:background="@drawable/ovalbuttonshape"
-        android:textColorLink="@color/black"/>
-
-    <!--<Button-->
-        <!--android:id="@+id/singUp_Button"-->
-        <!--android:text="Sing Up"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:background="@drawable/ovalbuttonshape"/>-->
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:background="@drawable/ovalbuttonshape" />
 
     <TextView
         android:id="@+id/signUp_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No account yet? Create one now!" />
+        android:text="@string/create_account_button" />
 
 </LinearLayout>

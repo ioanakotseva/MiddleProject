@@ -2,33 +2,42 @@ package com.example.ioana.projectshoesshop.model;
 
 public abstract class Product {
 
-	enum Brand_Model {NIKE, ADIDAS, LOUBOUTIN, LACOSTE, CHRISTIAN_DIOR, GUCCI, TIMBERLAND};
-	private Brand_Model brand_model;
-	enum Color {BLACK, WHITE, GREEN, PURPLE, PINK, RED, GRAY};
-	private Color colorType;
+	public enum Type {WOMEN, MEN, BAGS}
+	public enum Brand {NIKE, ADIDAS, LOUBOUTIN, LACOSTE, CHRISTIAN_DIOR, GUCCI, TIMBERLAND}
+	public enum Color {BLACK, WHITE, GREEN, PURPLE, PINK, RED, GRAY, BROWN, YELLOW, BLUE}
+
+	private Type type;
+	private Brand brand;
+	private Color color;
 	private double price;
-	//private int availability;
-	
-	public Product(Brand_Model brand_model, Color colorType, double price) {
-			this.brand_model = brand_model;
-			this.colorType=colorType;
-			if(price>0){
-				this.price = price;
-			}
-			else{
-				this.price = 6;
-			}
+	private int count;
+	private boolean availability; // when availability is 0, the product is not deleted
+
+	public Product(Brand brand, Color color, double price, int count) {
+		if(color != null) {
+			this.color = color;
+		}
+		if(brand != null) {
+			this.brand = brand;
+		}
+		if(price > 0) {
+			this.price = price;
+		}
+		if(count > 0){
+			this.count = count;
+		}
+		this.availability = true;
 	}
 
 	public double getPrice(){
 		return this.price;
 	}
-
-	public Brand_Model getBrand_model() {
-		return brand_model;
+	public void setType(Type type){
+		if(type != null){
+			this.type = type;
+		}
 	}
-
-	public Color getColorType() {
-		return colorType;
+	public boolean getAvailability(){
+		return availability;
 	}
 }

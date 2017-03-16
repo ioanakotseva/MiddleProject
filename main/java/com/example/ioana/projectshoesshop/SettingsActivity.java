@@ -14,7 +14,7 @@ public class SettingsActivity extends AppCompatActivity {
     private Button deleteAccount;
     private Button contactsButton;
     private Button myAccountButton;
-    private Button homeButton;
+    private Button settingsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +24,9 @@ public class SettingsActivity extends AppCompatActivity {
         changePassword = (Button) this.findViewById(R.id.changePassButton);
         logOut = (Button) this.findViewById(R.id.logOutButton);
         deleteAccount = (Button) this.findViewById(R.id.deleteAccountButton);
-        contactsButton = (Button) this.findViewById(R.id.contacts_settings);
-        myAccountButton = (Button) this.findViewById(R.id.myAccount_setting);
-        homeButton = (Button) this.findViewById(R.id.home_settings);
+        contactsButton = (Button) this.findViewById(R.id.contacts);
+        myAccountButton = (Button) this.findViewById(R.id.myAccount);
+        settingsButton = (Button) this.findViewById(R.id.settings);
 
         changePassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,10 +72,10 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
-        homeButton.setOnClickListener(new View.OnClickListener() {
+        settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SettingsActivity.this, HomeActivity.class);
+                Intent intent = new Intent(SettingsActivity.this, SettingsActivity.class);
                 SettingsActivity.this.startActivity(intent);
             }
         });
