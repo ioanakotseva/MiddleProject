@@ -1,29 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/VerticalLinearLayoutOrientation"
-    android:gravity="center"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
     android:background="@drawable/background_blurred"
-    tools:context="com.example.ioana.projectshoesshop.MainActivity"
-    android:padding="@android:dimen/app_icon_size" >
+    tools:context="com.example.ioana.middleproject.MainActivity">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/shop_name"
-        android:textStyle="bold"
-        android:textSize="45sp"
-        android:fontFamily="cursive"
-        android:gravity="center"/>
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Shoes Shop"
+    android:textStyle="bold"
+    android:textSize="45sp"
+        android:layout_marginTop="45dp"
+    android:fontFamily="cursive"
+    android:gravity="center"/>
 
     <EditText
         android:id="@+id/email_editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
         android:inputType="textEmailAddress"
-        android:hint="@string/email"
+        android:hint="username"
         android:textSize="15sp" />
 
     <EditText
@@ -31,21 +36,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:hint="@string/password"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="password"
         android:textSize="15sp"/>
 
     <Button
         android:id="@+id/logIn_Button"
-        android:text="@string/log_in"
+        android:text="Login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="75dp"
         android:background="@drawable/ovalbuttonshape" />
 
     <TextView
         android:id="@+id/signUp_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/create_account_button" />
+        android:text="Create Account" />
+
 
 </LinearLayout>
