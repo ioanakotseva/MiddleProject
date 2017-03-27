@@ -6,39 +6,48 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context="com.example.ioana.middleproject.ContactsActivity">
+    tools:context="com.example.ioana.middleproject.ShoppingCartActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/womanShoesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="Woman Shoes" />
+
+        <Button
+            android:id="@+id/manShoesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="Man Shoes" />
+
+        <Button
+            android:id="@+id/bagsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="Bags" />
+    </LinearLayout>
 
     <TextView
-        android:id="@id/settings"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="contacts:"
-        android:textAlignment="center"
+        android:text="Shopping Cart..."
         android:fontFamily="cursive"
-        android:textSize="45sp"
-        android:textStyle="bold"/>
-
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="serif-monospace"
-        android:text="Phone number: 0898/70/96/86
-             0895/55/01/75" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="serif-monospace"
-        android:text="e-mail: ioanakotseva@gmail.com
-       nikoleta.yankova@gmail.com" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="serif-monospace"
-        android:text="Address: Sofia, Bulgaria,
-        bul.Bulgaria 70" />
+        android:textSize="45sp"/>
 
     <LinearLayout
         android:layout_width="match_parent"

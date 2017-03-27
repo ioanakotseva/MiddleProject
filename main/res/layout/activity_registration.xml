@@ -1,34 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/VerticalLinearLayoutOrientation"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:padding="@dimen/fab_margin">
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context="com.example.ioana.middleproject.RegistrationActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/registration_page"
-        android:fontFamily="cursive"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textSize="45sp"
-        android:paddingBottom="@dimen/fab_margin"
-       />
+
+   <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Registration"
+    android:fontFamily="cursive"
+       android:layout_marginTop="30dp"
+       android:layout_marginBottom="30dp"
+    android:gravity="center"
+    android:textStyle="bold"
+    android:textSize="45sp"
+    />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/fab_margin"
-        style="@style/VerticalLinearLayoutOrientation">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center_horizontal">
 
         <EditText
             android:id="@+id/email_registration"
             android:inputType="textEmailAddress"
             android:layout_width="match_parent"
+            android:layout_marginBottom="20dp"
             android:layout_height="wrap_content"
-            android:hint="@string/email"
+            android:hint="username"
             android:textSize="15sp"/>
 
         <EditText
@@ -36,7 +44,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:hint="@string/password"
+            android:layout_marginBottom="20dp"
+            android:hint="password"
             android:textSize="15sp"/>
 
         <EditText
@@ -44,21 +53,27 @@
             android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/confirm_new_passwrd"
+            android:hint="confirm password"
             android:textSize="15sp"
             />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
 
         <Button
             android:id="@+id/singInButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/create_account_button_registration"
+            android:text="create account"
             android:background="@drawable/ovalbuttonshape"/>
 
         <Button
@@ -66,8 +81,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/cancel"
+            android:text="cancel"
             android:background="@drawable/ovalbuttonshape"/>
     </LinearLayout>
-
 </LinearLayout>
