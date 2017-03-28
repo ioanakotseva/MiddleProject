@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.ioana.middleproject.model.Bags;
+import com.example.ioana.middleproject.model.Product;
+
 public class BagsActivity extends AppCompatActivity {
 
     private Button womanShoesButton;
@@ -15,25 +18,31 @@ public class BagsActivity extends AppCompatActivity {
     private Button settingsButton;
     private Button myAccountButton;
 
+    static {
+        Bags.createNewWomanShoes(Product.Brand.CHRISTIAN_DIOR, 499.90);
+        Bags.createNewWomanShoes(Product.Brand.GUCCI, 978);
+        Bags.createNewWomanShoes(Product.Brand.LOUBOUTIN, 1974.10);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bags);
-        getSupportActionBar().hide();
 
-        womanShoesButton = (Button) this.findViewById(R.id.women_shoes_button_bags_page);
-        manShoesButton = (Button) this.findViewById(R.id.men_shoes_button_bags_page);
-        bagsButton = (Button) this.findViewById(R.id.bags_button_bags_page);
-        contactsButton = (Button) this.findViewById(R.id.contacts_bags_page);
-        myAccountButton = (Button) this.findViewById(R.id.my_account_bags_page);
-        settingsButton = (Button) this.findViewById(R.id.settings_bags_page);
+        womanShoesButton = (Button) this.findViewById(R.id.womanShoesButton);
+        manShoesButton = (Button) this.findViewById(R.id.manShoesButton);
+        bagsButton = (Button) this.findViewById(R.id.bagsButton);
+        contactsButton = (Button) this.findViewById(R.id.contacts);
+        myAccountButton = (Button) this.findViewById(R.id.myAccount);
+        settingsButton = (Button) this.findViewById(R.id.settings);
 
         womanShoesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(BagsActivity.this, WomanShoesActivity.class);
                 BagsActivity.this.startActivity(intent);
+                finish();
             }
         });
 
@@ -43,6 +52,7 @@ public class BagsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(BagsActivity.this, ManShoesActivity.class);
                 BagsActivity.this.startActivity(intent);
+                finish();
             }
         });
 
@@ -52,6 +62,7 @@ public class BagsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(BagsActivity.this, BagsActivity.class);
                 BagsActivity.this.startActivity(intent);
+                finish();
             }
         });
 
@@ -60,6 +71,7 @@ public class BagsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(BagsActivity.this, ContactsActivity.class);
                 BagsActivity.this.startActivity(intent);
+                finish();
             }
         });
 
@@ -68,6 +80,7 @@ public class BagsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(BagsActivity.this, MyAccountActivity.class);
                 BagsActivity.this.startActivity(intent);
+                finish();
             }
         });
 
@@ -76,6 +89,7 @@ public class BagsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(BagsActivity.this, SettingsActivity.class);
                 BagsActivity.this.startActivity(intent);
+                finish();
             }
         });
     }
