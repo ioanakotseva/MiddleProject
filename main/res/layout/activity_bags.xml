@@ -1,85 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context="com.example.ioana.middleproject.BagsActivity">
+    tools:context="com.example.ioana.middleproject.HomeActivity"
+    android:background="@drawable/background4">
+
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:id="@+id/womanShoesButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="serif-monospace"
-            android:textStyle="bold"
-            android:layout_weight="1"
-            android:textSize="15sp"
-            android:text="Woman Shoes" />
-
-        <Button
-            android:id="@+id/manShoesButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="serif-monospace"
-            android:textStyle="bold"
-            android:layout_weight="1"
-            android:textSize="15sp"
-            android:text="Man Shoes" />
-
-        <Button
-            android:id="@+id/bagsButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="serif-monospace"
-            android:textStyle="bold"
-            android:layout_weight="1"
-            android:textSize="15sp"
-            android:text="Bags" />
-    </LinearLayout>
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bags..."
-        android:fontFamily="cursive"
-        android:textSize="45sp" />
+        android:layout_alignParentTop="true">
+
+        <Button
+            android:id="@+id/women_shoes_button_bags_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:text="Women"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ovalbuttonshape"
+            android:alpha="0.6"/>
+
+        <Button
+            android:id="@+id/men_shoes_button_bags_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:text="Men"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ovalbuttonshape"
+            android:alpha="0.6"/>
+        <Button
+            android:id="@+id/bags_button_bags_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:text="Bags"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ovalbuttonshape"
+            android:alpha="0.6"/>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
 
         <Button
-            android:id="@+id/contacts"
+            android:id="@+id/contacts_bags_page"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
             android:textStyle="bold"
             android:textSize="15sp"
             android:layout_weight="1"
-            android:text="Contacts" />
+            android:text="Contacts"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ovalbuttonshape"
+            android:alpha="0.6"/>
 
         <Button
-            android:id="@+id/myAccount"
+            android:id="@+id/my_account_bags_page"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
             android:textStyle="bold"
             android:textSize="15sp"
             android:layout_weight="1"
-            android:text="My Account" />
+            android:text="My Account"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ovalbuttonshape"
+            android:alpha="0.6"/>
         <Button
-            android:id="@+id/settings"
+            android:id="@+id/settings_bags_page"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
             android:textStyle="bold"
             android:textSize="15sp"
             android:layout_weight="1"
-            android:text="Setting" />
+            android:text="Setting"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ovalbuttonshape"
+            android:alpha="0.6"/>
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

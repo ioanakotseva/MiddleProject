@@ -19,41 +19,37 @@ public class WomanShoesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bags);
+        setContentView(R.layout.activity_woman_shoes);
+        getSupportActionBar().hide();
 
-        womanShoesButton = (Button) this.findViewById(R.id.womanShoesButton);
-        manShoesButton = (Button) this.findViewById(R.id.manShoesButton);
-        bagsButton = (Button) this.findViewById(R.id.bagsButton);
-        contactsButton = (Button) this.findViewById(R.id.contacts);
-        myAccountButton = (Button) this.findViewById(R.id.myAccount);
-        settingsButton = (Button) this.findViewById(R.id.settings);
+        womanShoesButton = (Button) this.findViewById(R.id.women_shoes_button_women_page);
+        manShoesButton = (Button) this.findViewById(R.id.men_shoes_button_women_page);
+        bagsButton = (Button) this.findViewById(R.id.bags_button_women_page);
+        contactsButton = (Button) this.findViewById(R.id.contacts_women_page);
+        myAccountButton = (Button) this.findViewById(R.id.my_account_women_page);
+        settingsButton = (Button) this.findViewById(R.id.settings_women_page);
 
         womanShoesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(WomanShoesActivity.this, WomanShoesActivity.class);
                 WomanShoesActivity.this.startActivity(intent);
-                finish();
             }
         });
-
 
         manShoesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(WomanShoesActivity.this, ManShoesActivity.class);
                 WomanShoesActivity.this.startActivity(intent);
-                finish();
             }
         });
-
 
         bagsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(WomanShoesActivity.this, BagsActivity.class);
                 WomanShoesActivity.this.startActivity(intent);
-                finish();
             }
         });
 
@@ -62,7 +58,6 @@ public class WomanShoesActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(WomanShoesActivity.this, ContactsActivity.class);
                 WomanShoesActivity.this.startActivity(intent);
-                finish();
             }
         });
 
@@ -71,7 +66,6 @@ public class WomanShoesActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(WomanShoesActivity.this, MyAccountActivity.class);
                 WomanShoesActivity.this.startActivity(intent);
-                finish();
             }
         });
 
@@ -80,7 +74,6 @@ public class WomanShoesActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(WomanShoesActivity.this, SettingsActivity.class);
                 WomanShoesActivity.this.startActivity(intent);
-                finish();
             }
         });
     }

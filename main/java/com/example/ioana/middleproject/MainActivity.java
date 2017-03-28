@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
 
         username = (EditText) this.findViewById(R.id.email_editText);
         password = (EditText) this.findViewById(R.id.password_editText);

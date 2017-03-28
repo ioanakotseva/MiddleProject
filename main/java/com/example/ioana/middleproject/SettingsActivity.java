@@ -19,20 +19,20 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+        getSupportActionBar().hide();
 
-        changePassword = (Button) this.findViewById(R.id.changePassButton);
-        logOut = (Button) this.findViewById(R.id.logOutButton);
-        deleteAccount = (Button) this.findViewById(R.id.deleteAccountButton);
-        contactsButton = (Button) this.findViewById(R.id.contacts);
-        myAccountButton = (Button) this.findViewById(R.id.myAccount);
-        settingsButton = (Button) this.findViewById(R.id.settings);
+        changePassword = (Button) this.findViewById(R.id.change_password_button);
+        logOut = (Button) this.findViewById(R.id.log_out_button);
+        deleteAccount = (Button) this.findViewById(R.id.delete_account_button);
+        contactsButton = (Button) this.findViewById(R.id.contacts_settings_page);
+        myAccountButton = (Button) this.findViewById(R.id.my_account_settings_page);
+        settingsButton = (Button) this.findViewById(R.id.settings_settings_page);
 
         changePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SettingsActivity.this, ChangePasswordActivity.class);
                 SettingsActivity.this.startActivity(intent);
-
             }
         });
 

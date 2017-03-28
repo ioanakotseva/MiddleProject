@@ -19,13 +19,14 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        getSupportActionBar().hide();
 
-        womanShoesButton = (Button) this.findViewById(R.id.womanShoesButton);
-        manShoesButton = (Button) this.findViewById(R.id.manShoesButton);
-        bagsButton = (Button) this.findViewById(R.id.bagsButton);
-        contactsButton = (Button) this.findViewById(R.id.contacts);
-        myAccountButton = (Button) this.findViewById(R.id.myAccount);
-        settingsButton = (Button) this.findViewById(R.id.settings);
+        womanShoesButton = (Button) this.findViewById(R.id.women_shoes_button_home);
+        manShoesButton = (Button) this.findViewById(R.id.men_shoes_button_home);
+        bagsButton = (Button) this.findViewById(R.id.bags_button_home);
+        contactsButton = (Button) this.findViewById(R.id.contacts_home);
+        myAccountButton = (Button) this.findViewById(R.id.my_account_home);
+        settingsButton = (Button) this.findViewById(R.id.settings_home);
 
         womanShoesButton.setOnClickListener(new View.OnClickListener() {
             @Override

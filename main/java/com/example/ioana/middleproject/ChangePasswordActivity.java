@@ -11,6 +11,7 @@ import android.widget.Toast;
 public class ChangePasswordActivity extends AppCompatActivity {
 
     private Button changePassword;
+    private Button cancel;
     private EditText oldPassword;
     private EditText newPassword;
     private EditText confirmPassword;
@@ -19,11 +20,13 @@ public class ChangePasswordActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_password);
+        getSupportActionBar().hide();
 
-        changePassword = (Button) this.findViewById(R.id.changePassButton);
+        changePassword = (Button) this.findViewById(R.id.change_password_button);
         oldPassword = (EditText) this.findViewById(R.id.old_password);
         newPassword = (EditText) this.findViewById(R.id.new_password);
         confirmPassword = (EditText) this.findViewById(R.id.confirmed_password);
+        cancel = (Button) findViewById(R.id.cancel_change_password_button);
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
@@ -31,7 +34,6 @@ public class ChangePasswordActivity extends AppCompatActivity {
                 if((newPassword.getText().toString()).matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$")) {
                     if(newPassword.getText().toString().equals(confirmPassword.getText().toString())) {
                         Intent intent = new Intent(ChangePasswordActivity.this, MainActivity.class);
-
                         ChangePasswordActivity.this.startActivity(intent);
                         Toast.makeText(ChangePasswordActivity.this, "Successful change password", Toast.LENGTH_SHORT).show();
                         finish();
@@ -48,33 +50,14 @@ public class ChangePasswordActivity extends AppCompatActivity {
             }
         };
         changePassword.setOnClickListener(listener);
+
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChangePasswordActivity.this, SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
-
-   /* static boolean isStrongPassword(String password){
-        // A strong password has at least 5 symbols( small letters, capital letters and digits).
-        boolean hasSmallLetter = false;
-        boolean hasCapitalLetter = false;
-        boolean hasDigit = false;
-
-        if(password.length() < 5){
-            return false;
-        }
-
-        for(char c : password.toCharArray()){
-            if(c >= 'a' && c <= 'z'){
-                hasSmallLetter = true;
-            }
-            if(c >= 'A' && c <= 'Z'){
-                hasCapitalLetter = true;
-            }
-            if(c >= '1' && c <= '9'){
-                hasDigit = true;
-            }
-            if(hasSmallLetter && hasCapitalLetter && hasDigit){
-                return true;
-            }
-        }
-        return false;
-    } */
 }

@@ -1,11 +1,11 @@
 package com.example.ioana.middleproject.model;
 
-public abstract class Shoes extends Product{
+public class Shoes extends Product{
 
 	private int size;
 
-	public Shoes(Brand brand, Color colorType, double price) {
-		super(brand, colorType, price, count);
+	public Shoes(Brand brand, Color colorType, double price, int imageId, int size) {
+		super(brand, colorType, price, imageId);
 	}
 
 	public void setSize(int size) {

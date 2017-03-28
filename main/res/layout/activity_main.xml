@@ -4,30 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
     android:background="@drawable/background_blurred"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context="com.example.ioana.middleproject.MainActivity">
 
     <TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Shoes Shop"
-    android:textStyle="bold"
-    android:textSize="45sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
-    android:fontFamily="cursive"
-    android:gravity="center"/>
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="Shoes Shop"
+        android:textSize="45sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/email_editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp"
-        android:inputType="textEmailAddress"
         android:hint="username"
         android:textSize="15sp" />
 
@@ -35,21 +34,22 @@
         android:id="@+id/password_editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:hint="password"
-        android:textSize="15sp"/>
+        android:inputType="textPassword"
+        android:textSize="15sp" />
 
     <Button
         android:id="@+id/logIn_Button"
-        android:text="Login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="75dp"
-        android:background="@drawable/ovalbuttonshape" />
+        android:background="@drawable/ovalbuttonshape"
+        android:alpha="0.7"
+        android:text="Login" />
 
     <TextView
         android:id="@+id/signUp_Button"

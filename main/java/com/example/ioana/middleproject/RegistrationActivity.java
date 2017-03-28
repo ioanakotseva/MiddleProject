@@ -1,8 +1,8 @@
 package com.example.ioana.middleproject;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +22,7 @@ public class RegistrationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+        getSupportActionBar().hide();
 
         singIn = (Button) this.findViewById(R.id.singInButton);
         cancel = (Button) this.findViewById(R.id.cancelButton);
@@ -73,11 +74,6 @@ public class RegistrationActivity extends AppCompatActivity {
         }
         if(pass.isEmpty()){
             password.setError("Password cannot be empty!");
-            password.requestFocus();
-            return false;
-        }
-        if(pass2.isEmpty()){
-            confirmedPassword.setError("Confirm password cannot be empty!");
             password.requestFocus();
             return false;
         }

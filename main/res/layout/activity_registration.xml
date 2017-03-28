@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
+    android:padding="30dp"
+    android:background="@drawable/background4"
     tools:context="com.example.ioana.middleproject.RegistrationActivity">
 
 
@@ -14,8 +16,8 @@
     android:layout_height="wrap_content"
     android:text="Registration"
     android:fontFamily="cursive"
-       android:layout_marginTop="30dp"
-       android:layout_marginBottom="30dp"
+    android:layout_marginTop="30dp"
+    android:layout_marginBottom="30dp"
     android:gravity="center"
     android:textStyle="bold"
     android:textSize="45sp"
@@ -26,8 +28,6 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="vertical"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
         android:gravity="center_horizontal">
 
         <EditText
@@ -62,9 +62,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="30dp"
         android:orientation="horizontal"
         android:gravity="center_horizontal">
 
@@ -74,7 +71,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="create account"
-            android:background="@drawable/ovalbuttonshape"/>
+            android:layout_marginRight="20dp"
+            android:background="@drawable/ovalbuttonshape"
+            android:alpha="0.6"/>
 
         <Button
             android:id="@+id/cancelButton"
@@ -82,6 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="cancel"
+            android:alpha="0.6"
             android:background="@drawable/ovalbuttonshape"/>
     </LinearLayout>
 </LinearLayout>

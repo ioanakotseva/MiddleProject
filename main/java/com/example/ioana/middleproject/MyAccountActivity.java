@@ -16,10 +16,11 @@ public class MyAccountActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_account);
+        getSupportActionBar().hide();
 
-        contactsButton = (Button) this.findViewById(R.id.contacts);
-        myAccountButton = (Button) this.findViewById(R.id.myAccount);
-        settingsButton = (Button) this.findViewById(R.id.settings);
+        contactsButton = (Button) this.findViewById(R.id.contacts_my_account_page);
+        myAccountButton = (Button) this.findViewById(R.id.my_account_my_account_page);
+        settingsButton = (Button) this.findViewById(R.id.settings_my_account_page);
 
         contactsButton.setOnClickListener(new View.OnClickListener() {
             @Override

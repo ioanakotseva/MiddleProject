@@ -1,38 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context="com.example.ioana.middleproject.HomeActivity">
+    tools:context="com.example.ioana.middleproject.HomeActivity"
+    android:background="@drawable/background">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
         <Button
-            android:id="@+id/womanShoesButton"
+            android:id="@+id/women_shoes_button_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
             android:textStyle="bold"
             android:textSize="15sp"
             android:layout_weight="1"
-            android:text="Woman Shoes" />
+            android:text="Women" />
 
         <Button
-            android:id="@+id/manShoesButton"
+            android:id="@+id/men_shoes_button_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
             android:textStyle="bold"
             android:textSize="15sp"
             android:layout_weight="1"
-            android:text="Man Shoes" />
-
+            android:text="Men" />
         <Button
-            android:id="@+id/bagsButton"
+            android:id="@+id/bags_button_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
@@ -41,25 +43,14 @@
             android:layout_weight="1"
             android:text="Bags" />
     </LinearLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home Page..."
-        android:fontFamily="cursive"
-        android:textSize="45sp"/>
-
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/shoespic"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
 
         <Button
-            android:id="@+id/contacts"
+            android:id="@+id/contacts_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
@@ -69,7 +60,7 @@
             android:text="Contacts" />
 
         <Button
-            android:id="@+id/myAccount"
+            android:id="@+id/my_account_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
@@ -78,7 +69,7 @@
             android:layout_weight="1"
             android:text="My Account" />
         <Button
-            android:id="@+id/settings"
+            android:id="@+id/settings_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
@@ -88,4 +79,4 @@
             android:text="Setting" />
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
